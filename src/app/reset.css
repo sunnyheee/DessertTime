@@ -89,6 +89,9 @@ video {
 html {
   font-size: 62.5%;
 }
+body {
+  font-size: var(--fz16);
+}
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
