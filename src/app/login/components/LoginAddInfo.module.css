@@ -1,0 +1,27 @@
+.infoArticle {
+  text-align: center;
+}
+.infoBox {
+  padding: 2rem 0 4rem;
+  /* 임의 */
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: var(--fz24);
+  margin-bottom: 1rem;
+}
+.subtitle {
+  font-size: var(--fz18);
+  color: #656565;
+
+  margin-bottom: 3rem;
+}
+.categoryTitle {
+  font-weight: 700;
+  font-size: var(--fz20);
+  color: var(--pointColor);
+}
