@@ -6,6 +6,19 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "camelcase": "off"
+    "camelcase": "off",
+    "lines-around-directive": "off",
+    "no-unused-vars": "off",
+    "react/self-closing-comp": "off",
+    "prefer-default-export": "off",
+    "react/function-component-definition": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ]
   }
 }

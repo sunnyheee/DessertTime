@@ -1,0 +1,90 @@
+.title {
+  font-size: var(--fz36);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.subdes {
+  font-size: var(--fz20);
+  color: #656565;
+}
+
+.addInfoTitle {
+  font-size: var(--fz20);
+  color: #2b2b2b;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.addSelection {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--fz20);
+  color: #4e4e4e;
+}
+.genderOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+  padding: 1.8rem;
+}
+.addSelection .genderInput {
+  display: none;
+}
+.addSelection label {
+  width: 100%;
+}
+.addSelection input:checked + label {
+  background-color: #fcdada;
+  color: var(--pointColor);
+}
+.yearSelect,
+.addressInput {
+  width: 100%;
+  font-size: var(--fz20);
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid #ebebeb;
+}
+.yearSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('/images/calendar_today.svg') no-repeat right 1.8rem center;
+}
+
+.addressInput {
+  padding-left: 1.8rem;
+  background: url('/images/search.svg') no-repeat right 1.8rem center;
+  background-size: 21px 21px;
+}
+.addBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.formContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.buttonComplete {
+  background-color: var(--pointColor);
+  color: #fff;
+}
+.next {
+  flex: 2;
+}
+.prev {
+  flex: 1;
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}

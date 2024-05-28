@@ -32,8 +32,27 @@
     --fz30: min(4.8vw, 3rem);
     --fz32: min(5vw, 3.2rem);
     --fz34: min(5.2vw, 3.4rem);
-    --fz36: min(5.777vw, 3.6rem);
+    --fz36: min(5.69vw, 3.6rem);
+    --fz368: min(5.91vw, 3.8rem);
     --fz40: min(6vw, 4rem);
     --fz48: min(7.2vw, 4.8rem);
   }
+}
+.inner {
+  position: relative;
+  /* 임의 */
+  max-width: 970px;
+  width: 90%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  box-sizing: border-box;
+  padding: 4rem 0;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }

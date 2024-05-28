@@ -1,11 +1,15 @@
-// import styles from './page.module.css'
-import LoginAddInfo from './components/LoginAddInfo'
+import styles from './page.module.css'
+import AddAdimin from './components/AddAdimin'
 
-function Loginpage() {
+import { fetchCategories } from '../api/route'
+
+const Loginpage = async () => {
+  const data = await fetchCategories()
+
   return (
-    <section>
-      <LoginAddInfo />
-    </section>
+    <main className="main">
+      <AddAdimin data={data} />
+    </main>
   )
 }
 
