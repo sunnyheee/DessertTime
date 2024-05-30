@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from './agree.module.css';
 
@@ -9,12 +10,13 @@ export default function Home() {
   const [twiceChecked, setTwiceChecked] = useState(false);
   const [thirdChecked, setThirdChecked] = useState(false);
   const [isNextEnabled, setIsNextEnabled] = useState(false);
-  
+
+  const router = useRouter();
+
   useEffect(() => {
     setIsNextEnabled(firstChecked && twiceChecked);
   }, [firstChecked, twiceChecked]);
 
-  // 전체동의 체크박스 상태 변경 
   const handleAllCheckboxChange = () => {
     const newCheckedState = !allChecked;
     setAllChecked(newCheckedState);
@@ -23,21 +25,16 @@ export default function Home() {
     setThirdChecked(newCheckedState);
   };
 
-  // 다음 버튼 클릭 시 필수 항목 체크 여부 확인
-  const handleNextButtonClick = () => {
-    if (!firstChecked || !twiceChecked) {
-      alert('(필수) 항목에 동의해주세요.');
-    } else {
-    
-    }
+  const handlePrevButtonClick = () => {
+    router.push('/login');
   };
 
   return (
     <main className={styles.main}>
       <div className={styles.head}>
         <Image src='/images/cake.png' alt="로고" width={63} height={64} className={styles.logo} />
-        <p className={styles.headtxt}>디저트타임<b className={styles.subtxt}>에<br/>오신걸환영합니다!</b></p>
-        
+        <p className={styles.headtxt}>디저트타임<b className={styles.subtxt}>에<br />오신걸환영합니다!</b></p>
+
         <div className={`${styles.check} ${styles.firstCheck}`}>
           <input
             type='checkbox'
@@ -81,12 +78,21 @@ export default function Home() {
           />
           <label htmlFor='third' className={styles.agree}>(선택) 마케팅 및 광고 활용</label>
         </div>
-        <button
-          className={`${styles.nextbtn} ${isNextEnabled ? styles.nextbtnActive : ''}`}
-          onClick={handleNextButtonClick}
-        >
-          다음
-        </button>
+
+        <div className={styles.buttonContainer}>
+          <button
+            className={`${styles.button} ${styles.prevbtn}`}
+            onClick={handlePrevButtonClick}
+          >
+            이전
+          </button>
+          <button
+            className={`${styles.button} ${styles.nextbtn} ${isNextEnabled ? styles.nextbtnActive : ''}`}
+            disabled={!isNextEnabled}
+          >
+            다음
+          </button>
+        </div>
       </div>
     </main>
   );
