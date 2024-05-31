@@ -1,9 +1,14 @@
 import Image from 'next/image'
-import styles from './login.module.css'
+import styles from './page.module.css'
+import AddAdimin from './components/AddAdimin'
 
-export default function Home() {
+import { fetchCategories } from '../api/route'
+
+const Loginpage = async () => {
+  const data = await fetchCategories()
   return (
-    <main className={styles.main}>
+    <main className={`main ${styles.main}`}>
+      <AddAdimin data={data} />
       <div className={styles.container}>
         <Image
           src="/images/logo.png"
@@ -58,3 +63,4 @@ export default function Home() {
     </main>
   )
 }
+export default Loginpage
