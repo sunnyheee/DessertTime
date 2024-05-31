@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './agree.module.css'
 
-export default function Home() {
+export default function AgreeMent() {
   const [allChecked, setAllChecked] = useState(false)
   const [firstChecked, setFirstChecked] = useState(false)
   const [twiceChecked, setTwiceChecked] = useState(false)
