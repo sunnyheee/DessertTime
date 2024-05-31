@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './inquiry.module.css';
 import { useRouter } from 'next/navigation';
-export default function Home() {
+export default function Inquiry() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [isButtonEnabled, setIsButtonEnabled] = useState(false);

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import styles from './success.module.css'
 
-export default function Home() {
+export default function InquirySuccess() {
   const router = useRouter()
   const [countdown, setCountdown] = useState(5)
 

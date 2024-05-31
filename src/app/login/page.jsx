@@ -13,12 +13,13 @@ const Loginpage = () => {
           className={styles.logo}
         />
 
-        <div className={styles.linecontainer}>
+        
+        <div className={styles.buttonContainer}>
+          <div className={styles.linecontainer}>
           <div className={styles.line}></div>
           <div className={styles.text}>로그인/회원가입</div>
           <div className={styles.line}></div>
         </div>
-        <div className={styles.buttonContainer}>
           <button type="button" className={styles.imageButton}>
             <img
               src="/images/kakao.png"
