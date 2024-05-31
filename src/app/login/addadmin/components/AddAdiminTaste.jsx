@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
-import Button from '../../components/common/Button'
 import styles from './AddAdiminTaste.module.css'
+import Button from '../../../components/common/Button'
 
-function AddAdiminTaste({ onComplete, data, onPrevious }) {
+function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
   const [preferences, setPreferences] = useState([])
 
   const togglePreference = (preference) => {
@@ -28,18 +28,22 @@ function AddAdiminTaste({ onComplete, data, onPrevious }) {
       <form className={styles.formContent} onSubmit={handleSubmit}>
         <section className={styles.addBox}>
           <ul className={styles.tasteList}>
-            {data.map((item) => (
-              <li key={item.prd_id}>
-                <button
-                  type="button"
-                  onClick={() => togglePreference(item.prd_name)}
-                  className={`${styles.button} ${preferences.includes(item.prd_name) ? styles.selected : ''}`}
-                >
-                  <img src={item.prd_img} alt={item.prd_name} />
-                  {item.prd_name}
-                </button>
-              </li>
-            ))}
+            {cateData.length > 0 ? (
+              cateData.map((item) => (
+                <li key={item.prd_id}>
+                  <button
+                    type="button"
+                    onClick={() => togglePreference(item.prd_name)}
+                    className={`${styles.button} ${preferences.includes(item.prd_name) ? styles.selected : ''}`}
+                  >
+                    <img src={item.prd_img} alt={item.prd_name} />
+                    {item.prd_name}
+                  </button>
+                </li>
+              ))
+            ) : (
+              <li className={styles.noData}>데이터를 찾지 못했습니다</li>
+            )}
           </ul>
           <div className={styles.buttonContainer}>
             <Button text="이전" className={styles.prev} onClick={onPrevious} />

@@ -1,0 +1,19 @@
+.progressbar {
+  display: flex;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.progressbar li {
+  width: 50%;
+  height: 8px;
+  border-radius: 5px;
+  background-color: var(--pointColor);
+}
+.progressbar li:last-child {
+  margin-right: 0;
+}
+.progressbar li.completed {
+  width: 100%;
+}

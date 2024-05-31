@@ -1,14 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import AddAdimin from './components/AddAdimin'
 
-import { fetchCategories } from '../api/route'
-
-const Loginpage = async () => {
-  const data = await fetchCategories()
+const Loginpage = () => {
   return (
     <main className={`main ${styles.main}`}>
-      <AddAdimin data={data} />
       <div className={styles.container}>
         <Image
           src="/images/logo.png"

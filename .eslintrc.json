@@ -12,6 +12,7 @@
     "react/self-closing-comp": "off",
     "prefer-default-export": "off",
     "react/function-component-definition": "off",
+    "arrow-body-style": "off",
     "jsx-a11y/label-has-associated-control": [
       "error",
       {

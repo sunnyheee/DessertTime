@@ -1,11 +1,11 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import styles from './AddAdimin.module.css'
-import AddAdiminInfo from './AddAdiminInfo'
+import styles from './AddAdmin.module.css'
 import AddAdiminTaste from './AddAdiminTaste'
+import AddAdiminInfo from './AddAdiminInfo'
 
-function AddAdimin({ data }) {
+function AddAdimin({ cateData }) {
   const [isInfoComplete, setIsInfoComplete] = useState(false)
   const [userInfo, setUserInfo] = useState({
     gender: '',
@@ -32,7 +32,7 @@ function AddAdimin({ data }) {
   }
 
   return (
-    <section className="inner">
+    <main className="main inner">
       <div>
         <ul className={styles.progressbar}>
           <li className={isInfoComplete ? styles.completed : ''}></li>
@@ -45,12 +45,12 @@ function AddAdimin({ data }) {
         />
       ) : (
         <AddAdiminTaste
-          data={data}
+          cateData={cateData}
           onComplete={handleTasteComplete}
           onPrevious={handlePrevious}
         />
       )}
-    </section>
+    </main>
   )
 }
 

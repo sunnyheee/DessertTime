@@ -1,9 +1,12 @@
 'use client'
 import { useState } from 'react'
-import Button from '../../components/common/Button'
-import styles from './AddAdiminInfo.module.css'
+import { useRouter } from 'next/navigation'
 
-function AddAdiminInfo({ onComplete, onPrevious }) {
+import styles from './AddAdiminInfo.module.css'
+import Button from '../../../components/common/Button'
+
+function AddAdiminInfo({ onComplete }) {
+  const router = useRouter()
   const [gender, setGender] = useState('')
   const [birthYear, setBirthYear] = useState('')
   const [address, setAddress] = useState('')
@@ -27,6 +30,9 @@ function AddAdiminInfo({ onComplete, onPrevious }) {
   const handleBirthYearChange = (e) => setBirthYear(e.target.value)
   const handleAddressChange = (e) => setAddress(e.target.value)
 
+  const onPrevious = () => {
+    router.push('/login/agreeMent')
+  }
   const handleSubmit = (e) => {
     e.preventDefault()
     if (isFormComplete) {
