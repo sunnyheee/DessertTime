@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import styles from './AddAdimin.module.css'
-import AddAdiminInfo from './AddAdiminInfo'
-import AddAdiminTaste from './AddAdiminTaste'
+import styles from './page.module.css'
+import AddAdiminInfo from './components/AddAdiminInfo'
+import AddAdiminTaste from './components/AddAdiminTaste'
 
 function AddAdimin({ data }) {
   const [isInfoComplete, setIsInfoComplete] = useState(false)
@@ -32,7 +32,7 @@ function AddAdimin({ data }) {
   }
 
   return (
-    <section className="inner">
+    <main className="main inner">
       <div>
         <ul className={styles.progressbar}>
           <li className={isInfoComplete ? styles.completed : ''}></li>
@@ -50,7 +50,7 @@ function AddAdimin({ data }) {
           onPrevious={handlePrevious}
         />
       )}
-    </section>
+    </main>
   )
 }
 

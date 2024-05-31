@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import AddAdimin from './components/AddAdimin'
 
 import { fetchCategories } from '../api/route'
+import AddAdimin from './addadmin/page'
 
 const Loginpage = async () => {
   const data = await fetchCategories()

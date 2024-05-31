@@ -28,6 +28,10 @@ export default function Home() {
   const handlePrevButtonClick = () => {
     router.push('/login')
   }
+  // 다음버튼 클릭시 추가정보입력으로 이동
+  const handleSubmit = (e) => {
+    router.push('/login/addadmin')
+  }
 
   return (
     <main className={styles.main}>
@@ -108,9 +112,10 @@ export default function Home() {
             이전
           </button>
           <button
-            type="button"
+            type="submit"
             className={`${styles.button} ${styles.nextbtn} ${isNextEnabled ? styles.nextbtnActive : ''}`}
             disabled={!isNextEnabled}
+            onClick={handleSubmit}
           >
             다음
           </button>
