@@ -1,0 +1,119 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.head {
+  margin: auto;
+  margin-top: 32px;
+  min-width: 480px;
+}
+
+.headtxt {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #030303;
+}
+
+.subtxt {
+  font-weight: 500;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-image: url('/images/checkbox.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.agree {
+  margin-left: 24px;
+  font-family: 'SF UI Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #656565;
+}
+
+.checkbox:checked + .agree {
+  color: #000000;
+}
+
+.allagree {
+  color: #000000;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.firstCheck {
+  padding-bottom: 1px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 211px;
+  gap: 9px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 16px;
+  gap: 10px;
+  height: 61px;
+  border: none;
+  border-radius: 13px;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.38px;
+}
+
+.prevbtn {
+flex: 1;
+  background: #f4f4f4;
+  color: #4e4e4e;
+}
+
+.nextbtn {
+ flex: 2;
+  background: #dfdfdf;
+  color: #9c9c9c;
+}
+
+.nextbtnActive {
+  background: #ef4444;
+  color: #ffffff;
+}
