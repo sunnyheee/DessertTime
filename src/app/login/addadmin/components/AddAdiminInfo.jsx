@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-
+import Script from 'next/script'
 import styles from './AddAdiminInfo.module.css'
 import Button from '../../../components/common/Button'
 
@@ -10,6 +10,7 @@ function AddAdiminInfo({ onComplete }) {
   const [gender, setGender] = useState('')
   const [birthYear, setBirthYear] = useState('')
   const [address, setAddress] = useState('')
+  const [isScriptLoaded, setIsScriptLoaded] = useState(false)
 
   const generateYearOptions = () => {
     const currentYear = new Date().getFullYear()
@@ -30,6 +31,15 @@ function AddAdiminInfo({ onComplete }) {
   const handleBirthYearChange = (e) => setBirthYear(e.target.value)
   const handleAddressChange = (e) => setAddress(e.target.value)
 
+  const getAddress = () => {
+    if (!isScriptLoaded) return
+    new window.daum.Postcode({
+      oncomplete: (data) => {
+        setAddress(data.address)
+      },
+    }).open()
+  }
+
   const onPrevious = () => {
     router.push('/login/agreeMent')
   }
@@ -42,6 +52,11 @@ function AddAdiminInfo({ onComplete }) {
 
   return (
     <>
+      <Script
+        src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"
+        strategy="afterInteractive"
+        onLoad={() => setIsScriptLoaded(true)}
+      />
       <h2 className={styles.title}>추가 정보 입력</h2>
       <p className={styles.subdes}>
         추가 정보를 입력하면
@@ -95,7 +110,10 @@ function AddAdiminInfo({ onComplete }) {
               id="address"
               name="address"
               placeholder="주소를 입력해주세요"
+              value={address}
               onChange={handleAddressChange}
+              onClick={getAddress}
+              readOnly
             />
           </div>
         </div>
