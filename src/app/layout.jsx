@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body className={notoSansKr.className}>{children}</body>
+      <body className={`wrapper ${notoSansKr.className}`}>{children}</body>
     </html>
   )
 }
