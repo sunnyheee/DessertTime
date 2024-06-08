@@ -2,14 +2,13 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 0 30px;
+  box-sizing: border-box;
+height: 100vh;
 }
 
 .head {
-  margin: auto;
   margin-top: 32px;
-  min-width: 480px;
 }
 
 .headtxt {

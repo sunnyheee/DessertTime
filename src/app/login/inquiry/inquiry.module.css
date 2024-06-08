@@ -2,18 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
 }
 
 .head {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 480px;
   position: relative;
   margin-bottom: 32px;
 }
-
+.content{
+  padding: 0 16px;
+}
 .title {
   margin: 0 auto;
   font-family: 'SF Pro Display';
@@ -28,7 +30,7 @@
 
 .head img {
   position: absolute;
-  left: 0;
+  left: 21px;
 }
 
 .email {
@@ -80,7 +82,6 @@
   font-size: 12px;
   line-height: 15px;
   font-feature-settings: 'case' on;
-  color: rgba(0, 0, 0, 0.3);
   resize: none;
 }
 .container {
