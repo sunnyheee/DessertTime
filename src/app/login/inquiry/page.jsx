@@ -46,6 +46,7 @@ export default function Inquiry() {
                         문의하기
                     </h2>
                 </div>
+                <div className={styles.content}>
                 <p className={styles.email}>답변용 이메일</p>
                 <input
                     type="email"
@@ -68,6 +69,7 @@ export default function Inquiry() {
                 >
                     보내기
                 </button>
+                </div>
             </div>
         </main>
     );
