@@ -1,7 +1,7 @@
 import { Noto_Sans_KR } from 'next/font/google'
 import './globals.css'
 import './reset.css'
-import Footer from './components/Footer'
+import Footer from './components/common/Footer'
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['400', '500', '600', '700'],
@@ -16,9 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body className={`wrapper ${notoSansKr.className}`}>{children}
-        <Footer/>
-      </body>
+      <body className={`wrapper ${notoSansKr.className}`}>{children}</body>
     </html>
   )
 }
