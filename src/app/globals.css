@@ -1,0 +1,67 @@
+:root {
+  --fz12: 1.2rem;
+  --fz14: 1.4rem;
+  --fz16: 1.6rem;
+  --fz18: 1.8rem;
+  --fz20: 2rem;
+  --fz22: 2.2rem;
+  --fz24: 2.4rem;
+  --fz26: 2.6rem;
+  --fz28: 2.8rem;
+  --fz30: 3rem;
+  --fz32: 3.2rem;
+  --fz34: 3.4rem;
+  --fz36: 3.6rem;
+  --fz38: 3.8rem;
+  --fz40: 4rem;
+  --fz48: 4.8rem;
+  --fz80: 8rem;
+  --pointColor: #ef4444;
+}
+@media screen and (max-width: 640px) {
+  :root {
+    --fz12: min(2.4vw, 1.2rem);
+    --fz14: min(3vw, 1.4rem);
+    --fz16: min(3.3vw, 1.6rem);
+    --fz18: min(3.6vw, 1.8rem);
+    --fz20: min(3.8vw, 2rem);
+    --fz22: min(4vw, 2.2rem);
+    --fz24: min(4.2vw, 2.4rem);
+    --fz26: min(4.42vw, 2.6rem);
+    --fz28: min(4.67vw, 2.8rem);
+    --fz30: min(4.8vw, 3rem);
+    --fz32: min(5vw, 3.2rem);
+    --fz34: min(5.2vw, 3.4rem);
+    --fz36: min(5.69vw, 3.6rem);
+    --fz368: min(5.91vw, 3.8rem);
+    --fz40: min(6vw, 4rem);
+    --fz48: min(7.2vw, 4.8rem);
+  }
+}
+.wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #fff;
+  width: auto;
+  position: relative;
+  min-height: 100%;
+  box-shadow: 0 0 20px #0000000d;
+}
+.inner {
+  position: relative;
+  /* 임의 */
+  max-width: 970px;
+  width: 90%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  box-sizing: border-box;
+  padding: 4rem 0;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

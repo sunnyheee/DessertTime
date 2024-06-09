@@ -1,0 +1,78 @@
+.title {
+  font-size: var(--fz36);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.subdes {
+  font-size: var(--fz20);
+  color: #656565;
+}
+.tasteList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.tasteList li {
+  flex: 1 0 calc(25% - 1rem); /* 반응형으로 너비를 설정합니다 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #fff;
+  border: 1px solid #bcbcbc;
+  color: #bcbcbc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button.selected {
+  color: var(--pointColor);
+  border-color: var(--pointColor);
+}
+
+.button img {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.buttonComplete {
+  background: var(--pointColor);
+  color: white;
+}
+.addBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.formContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+button.complete {
+  background-color: var(--pointColor);
+  color: #fff;
+}
+.next {
+  flex: 2;
+}
+.prev {
+  flex: 1;
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
