@@ -1,9 +1,7 @@
-"use client"; 
-import { Noto_Sans_KR } from 'next/font/google';
-import './globals.css';
-import './reset.css';
-import Footer from './components/Footer';
-import { usePathname } from 'next/navigation';
+import { Noto_Sans_KR } from 'next/font/google'
+import './globals.css'
+import './reset.css'
+import Footer from './components/common/Footer'
 
 const notoSansKr = Noto_Sans_KR({
   weight: ['400', '500', '600', '700'],
@@ -23,9 +21,8 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="ko">
-      <body className={`wrapper ${notoSansKr.className}`}>
-        {children}
-        {showFooter && <Footer />}
+      <body className={`wrapper ${notoSansKr.className}`}>{children}
+        
       </body>
     </html>
   );
