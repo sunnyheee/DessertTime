@@ -4,10 +4,12 @@ import styles from './page.module.css'
 import { KaKaohandleLogin } from './social/kakaoLogin';
 import {NaverhandleLogin} from './social/naverLogin'
 import { GooglehandleLogin } from './social/googleLogin';
+
 const Loginpage = () => {
 
 
   return (
+    
     <main className={`main ${styles.main}`}>
       <div className={styles.container}>
         <Image
