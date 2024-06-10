@@ -1,92 +1,81 @@
-.main {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    flex-direction: column;
-    padding-top: 304px;
-    box-sizing: border-box;
-    overflow-y: auto;
-    padding-bottom: 102px;
-  }
-  
-  .header {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    width: 480px;
-    height: 63px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 17px 20px;
-    box-sizing: border-box;
-    background-color: white;
-  }
-  
-  .icon {
-    display: flex;
-    align-items: center;
-    gap: 21px;
-  }
-  
-  .swiperContainer {
-    width: 100%;
-    height: 251px;
-    position: absolute;
-    top: 63px;
-    margin-left: 15px;
-  }
-  
-  .reviewtxt {
-    margin-bottom: 12px;
-    font-size: 18px;
-    color: #030303;
-    font-style: normal;
-    font-weight: 510;
-    line-height: 150%;
-    letter-spacing: -0.011em;
-  }
-  
-  .swiperSlide, .swiperSlide2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    cursor: pointer;
-  }
-  
-  .swiperSlide {
-    width: 344px;
-    height: 214px;
-  }
-  
-  .swiperSlide2 {
-    width: 106px;
-    height: 140px;
-    border-radius: 10px;
-  }
-  
-  .swiper-pagination {
-    position: absolute;
-    bottom: -25px;
-  }
-  
-  .swiper-pagination-bullet {
-    background: #ededed;
-    opacity: 1;
-    width: 8px;
-    height: 8px;
-    margin: 0 4px;
-    border-radius: 50%;
-  }
-  
-  .reviewSection {
-    display: flex;
-    flex-direction: column;
-    padding: 0 26px;
-    box-sizing: border-box;
-    margin-top: 20px;
-  }
-  
+.homeSec {
+  padding: 5.5rem 0 4rem;
+}
+
+.header {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  width: 480px;
+  height: 63px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.swiperContainer {
+  padding-bottom: 4rem;
+  margin-left: 15px;
+}
+
+.reviewtxt {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #030303;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+}
+
+.swiperSlide,
+.swiperSlide2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.swiperSlide {
+  width: 344px;
+  height: 214px;
+}
+
+.swiperSlide2 {
+  width: 106px;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: -25px;
+}
+
+.swiper-pagination-bullet {
+  background: #ededed;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 50%;
+}
+
+.reviewSection {
+  display: flex;
+  flex-direction: column;
+  padding: 0 26px;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
