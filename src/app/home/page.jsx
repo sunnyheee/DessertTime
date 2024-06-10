@@ -7,7 +7,7 @@ const Homepage = () => {
       <main className="main">
         <div>Homepage</div>
       </main>
-      <Footer activeButton="home" />
+      <Footer activeButton="" />
     </>
   )
 }
