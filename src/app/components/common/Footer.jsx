@@ -9,7 +9,7 @@ import MypageIcon from '../icon/MypageIcon'
 
 const Footer = ({ activeButton }) => {
   const menuItems = [
-    { component: HomeIcon, label: 'home', name: '홈' },
+    { component: HomeIcon, label: '', name: '홈' },
     { component: CategoryIcon, label: 'category', name: '카테고리' },
     { component: ReviewIcon, label: 'review', name: '후기작성' },
     { component: HeartIcon, label: 'heart', name: '좋아요' },
