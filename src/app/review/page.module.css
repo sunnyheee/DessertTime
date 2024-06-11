@@ -1,0 +1,60 @@
+.container {
+  background-color: #f4f4f4;
+  height: 100vh;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+.txt {
+  width: 36px;
+  height: 18px;
+  font-size: 11px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+.subtxt {
+  font-family: 'SF Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #111111;
+}
+.subleft {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 8px;
+}
+.subright{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.subtit{
+    display: flex;
+    justify-content: space-between;
+    /* 22일 남았어요! */
+
+font-family: 'SF Pro';
+font-style: normal;
+font-weight: 400;
+font-size: 11px;
+line-height: 150%;
+letter-spacing: -0.01em;
+
+color: #444444;
+
+
+}

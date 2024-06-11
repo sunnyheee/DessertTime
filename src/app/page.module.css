@@ -1,26 +1,18 @@
+
 .homeSec {
   padding: 5.5rem 0 4rem;
 }
 
-.header {
+.header1 {
   z-index: 100;
   position: fixed;
   top: 0;
   width: 480px;
   height: 63px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 17px 20px;
   box-sizing: border-box;
   background-color: white;
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-  gap: 21px;
-}
 
 .swiperContainer {
   padding-bottom: 4rem;

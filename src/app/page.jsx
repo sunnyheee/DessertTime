@@ -5,6 +5,8 @@ import { Pagination, Autoplay } from 'swiper/modules'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Footer from './components/common/Footer'
+import './root.css'
+import Header from './components/common/Header'
 
 export default function Home() {
   const slides = ['/images/image1.png', '/images/image2.png']
@@ -51,29 +53,9 @@ export default function Home() {
   return (
     <>
       <section className={styles.homeSec}>
-        <div className={styles.header}>
-          <Image
-            src="/images/dessertTime.png"
-            alt="메인로고"
-            width={216}
-            height={29}
-            style={{ cursor: 'pointer' }}
-          />
-          <div className={styles.icon}>
-            <Image
-              src="/images/search.png"
-              alt="메인서치"
-              width={18}
-              height={18}
-            />
-            <Image
-              src="/images/bell.png"
-              alt="메인알림"
-              width={24}
-              height={24}
-            />
-          </div>
-        </div>
+      <div className={styles.header1}> 
+         <Header showBackButton = {false} showIcons = {true} showMainLogo = {true}  />
+         </div>
         <Swiper
           spaceBetween={8}
           slidesPerView="auto"
@@ -122,7 +104,7 @@ export default function Home() {
           </div>
         ))}
       </section>
-      <Footer />
+      <Footer activeButton="" />
     </>
   )
 }
