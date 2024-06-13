@@ -37,7 +37,7 @@ export default function Inquiry() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <Header title="문의하기" showBackButton={true} showIcons={false}/>
+                <Header title="문의하기" showBackButton={true} showIcons={false}    showMainLogo={false}/>
                 <div className={styles.content}>
                     <p className={styles.email}>답변용 이메일</p>
                     <input

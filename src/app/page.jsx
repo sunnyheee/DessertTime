@@ -58,7 +58,7 @@ export default function Home() {
          </div>
         <Swiper
           spaceBetween={8}
-          slidesPerView="auto"
+          slidesPerView={1}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -73,8 +73,8 @@ export default function Home() {
               <Image
                 src={slide}
                 alt={`Slide ${index + 1}`}
-                width={348}
-                height={214}
+                width={480}
+                height={241}
               />
             </SwiperSlide>
           ))}
