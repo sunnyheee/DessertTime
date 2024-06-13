@@ -53,7 +53,7 @@ const Reviewpage = () => {
 
   return (
     <>
-      <main className="main">
+      <main className={styles.main}>
         <div className={styles.homeSec}>
           <div className={styles.header1}>
             <Header

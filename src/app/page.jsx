@@ -86,7 +86,6 @@ export default function Home() {
               <Swiper
                 spaceBetween={8}
                 slidesPerView="auto"
-                loop={true}
                 className={styles.slidewrap}
               >
                 {review.images.map((image, imageIndex) => (

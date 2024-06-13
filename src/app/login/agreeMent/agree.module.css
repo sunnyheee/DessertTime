@@ -81,7 +81,18 @@ height: 100vh;
   margin-top: 211px;
   gap: 9px;
 }
+@media (min-width: 600px) {
+  .buttonContainer {
+    margin-top: 300px; 
+  }
+}
 
+
+@media (min-width: 800px) {
+  .buttonContainer {
+    margin-top: 467px;
+  }
+}
 .button {
   display: flex;
   flex-direction: row;
