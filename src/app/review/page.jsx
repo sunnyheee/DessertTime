@@ -9,6 +9,7 @@ const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)
   const [showDelete, setShowDelete] = useState(false)
   const [showModal, setShowModal] = useState(false)
+  const [clicked, setClicked] = useState(false)
 
   useEffect(() => {
     const updateDaysLeft = () => {
@@ -25,6 +26,7 @@ const Reviewpage = () => {
 
     return () => clearInterval(intervalId)
   }, [])
+
   const handleDotsClick = () => {
     setShowDelete((prevState) => !prevState)
   }
@@ -39,6 +41,14 @@ const Reviewpage = () => {
 
   const handleCancelDelete = () => {
     setShowModal(false)
+  }
+
+  const handleWriteClick = () => {
+    setClicked(true)
+
+    setTimeout(() => {
+      setClicked(false)
+    }, 500)
   }
 
   return (
@@ -77,12 +87,16 @@ const Reviewpage = () => {
                 <p className={styles.dessert}>초코 치즈 스콘</p>
               </div>
               <div className={styles.revright}>
-                <div className={styles.write}>
+                <div
+                  className={`${styles.write} ${clicked ? styles.clicked : ''}`}
+                  onClick={handleWriteClick}
+                >
                   <Image
-                    src="/images/edit.png"
+                    src="/images/edit.svg"
                     width={14}
                     height={14}
                     alt="작성"
+                    className={styles.afteredit}
                   />
                 </div>
                 <div className={styles.dotsButton} onClick={handleDotsClick}>
