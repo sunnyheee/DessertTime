@@ -1,24 +1,29 @@
 'use client'
+import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/common/Footer'
 import styles from './page.module.css'
 import Header from '../components/common/Header'
-import Image from 'next/image'
+import EditIcon from '../components/icon/EditIcon'
 
 const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)
   const [showDelete, setShowDelete] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [clicked, setClicked] = useState(false)
+  const [iconColor, setIconColor] = useState({
+    fill: '#828282',
+    stroke: '#828282',
+  })
 
   useEffect(() => {
     const updateDaysLeft = () => {
       const now = new Date()
       const lastDayOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0)
-      const daysLeft = Math.floor(
+      const daysLeftNum = Math.floor(
         (lastDayOfMonth - now) / (1000 * 60 * 60 * 24),
       )
-      setDaysLeft(daysLeft)
+      setDaysLeft(daysLeftNum)
     }
 
     updateDaysLeft()
@@ -45,9 +50,11 @@ const Reviewpage = () => {
 
   const handleWriteClick = () => {
     setClicked(true)
+    setIconColor({ fill: '#ef4444', stroke: '#ef4444' })
 
     setTimeout(() => {
       setClicked(false)
+      setIconColor({ fill: '#828282', stroke: '#828282' })
     }, 500)
   }
 
@@ -59,7 +66,7 @@ const Reviewpage = () => {
             <Header
               title="후기작성"
               showBackButton={false}
-              showIcons={true}
+              showIcons
               showMainLogo={false}
             />
           </div>
@@ -87,19 +94,19 @@ const Reviewpage = () => {
                 <p className={styles.dessert}>초코 치즈 스콘</p>
               </div>
               <div className={styles.revright}>
-                <div
+                <button
                   className={`${styles.write} ${clicked ? styles.clicked : ''}`}
                   onClick={handleWriteClick}
+                  type="button"
                 >
-                  <Image
-                    src="/images/edit.svg"
-                    width={14}
-                    height={14}
-                    alt="작성"
-                    className={styles.afteredit}
-                  />
-                </div>
-                <div className={styles.dotsButton} onClick={handleDotsClick}>
+                  {/* SVG를 컴포넌트로 만들었어요! */}
+                  <EditIcon fill={iconColor.fill} stroke={iconColor.stroke} />
+                </button>
+                <button
+                  className={styles.dotsButton}
+                  onClick={handleDotsClick}
+                  type="button"
+                >
                   <div
                     className={`${styles.dot} ${showDelete ? styles.active : ''}`}
                   ></div>
@@ -111,9 +118,10 @@ const Reviewpage = () => {
                   ></div>
                   <div className={styles.deletewrap}>
                     {showDelete && (
-                      <div
+                      <button
                         className={`${styles.deleteContainer} ${styles.showDeleteContainer}`}
                         onClick={handleDeleteClick}
+                        type="button"
                       >
                         <Image
                           src="/images/delete.png"
@@ -121,17 +129,19 @@ const Reviewpage = () => {
                           height={18}
                           alt="쓰레기통"
                         />
-                        <button className={styles.deleteButton}>
+                        <button className={styles.deleteButton} type="button">
                           삭제하기
                         </button>
-                      </div>
+                      </button>
                     )}
                   </div>
-                </div>
+                </button>
               </div>
             </div>
 
-            <button className={styles.upload}>새로운 영수증 등록하기</button>
+            <button className={styles.upload} type="button">
+              새로운 영수증 등록하기
+            </button>
           </div>
         </div>
       </main>
@@ -148,12 +158,14 @@ const Reviewpage = () => {
               <button
                 className={`${styles.modalButton} ${styles.confirmButton}`}
                 onClick={handleConfirmDelete}
+                type="button"
               >
                 삭제하기
               </button>
               <button
                 className={`${styles.modalButton} ${styles.cancelButton}`}
                 onClick={handleCancelDelete}
+                type="button"
               >
                 아니오
               </button>
