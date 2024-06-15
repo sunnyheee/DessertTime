@@ -1,0 +1,114 @@
+{
+  "categories": [
+    {
+      "name": "빵",
+      "slug": "bread",
+      "subcategories": [
+        { "name": "식빵", "slug": "shikppang" },
+        { "name": "크로와상", "slug": "croissant" },
+        { "name": "호밀빵", "slug": "rye-bread" },
+        { "name": "바게트", "slug": "baguette" },
+        { "name": "치아바타", "slug": "ciabatta" }
+      ]
+    },
+    {
+      "name": "과일디저트",
+      "slug": "fruit-dessert",
+      "subcategories": [
+        { "name": "딸기 케이크", "slug": "strawberry-cake" },
+        { "name": "망고 푸딩", "slug": "mango-pudding" },
+        { "name": "블루베리 타르트", "slug": "blueberry-tart" },
+        { "name": "사과 파이", "slug": "apple-pie" },
+        { "name": "포도 젤리", "slug": "grape-jelly" }
+      ]
+    },
+    {
+      "name": "여름디저트",
+      "slug": "summer-dessert",
+      "subcategories": [
+        { "name": "팥빙수", "slug": "patbingsu" },
+        { "name": "아이스크림", "slug": "ice-cream" },
+        { "name": "젤라또", "slug": "gelato" },
+        { "name": "프라푸치노", "slug": "frappuccino" },
+        { "name": "아이스 라떼", "slug": "iced-latte" }
+      ]
+    },
+    {
+      "name": "요거트",
+      "slug": "yogurt",
+      "subcategories": [
+        { "name": "플레인 요거트", "slug": "plain-yogurt" },
+        { "name": "딸기 요거트", "slug": "strawberry-yogurt" },
+        { "name": "블루베리 요거트", "slug": "blueberry-yogurt" },
+        { "name": "망고 요거트", "slug": "mango-yogurt" },
+        { "name": "그릭 요거트", "slug": "greek-yogurt" }
+      ]
+    },
+    {
+      "name": "전통 디저트",
+      "slug": "traditional-dessert",
+      "subcategories": [
+        { "name": "개성주악", "slug": "gaeseong-juak" },
+        { "name": "달고나", "slug": "dalgona" },
+        { "name": "약과", "slug": "yakgwa" },
+        { "name": "양갱", "slug": "yanggaeng" },
+        { "name": "유과", "slug": "yugwa" }
+      ]
+    },
+    {
+      "name": "초콜릿",
+      "slug": "chocolate",
+      "subcategories": [
+        { "name": "다크 초콜릿", "slug": "dark-chocolate" },
+        { "name": "밀크 초콜릿", "slug": "milk-chocolate" },
+        { "name": "화이트 초콜릿", "slug": "white-chocolate" },
+        { "name": "트러플", "slug": "truffle" },
+        { "name": "프랄린", "slug": "praline" }
+      ]
+    },
+    {
+      "name": "케이크",
+      "slug": "cake",
+      "subcategories": [
+        { "name": "치즈 케이크", "slug": "cheesecake" },
+        { "name": "초콜릿 케이크", "slug": "chocolate-cake" },
+        { "name": "레드벨벳 케이크", "slug": "red-velvet-cake" },
+        { "name": "당근 케이크", "slug": "carrot-cake" },
+        { "name": "티라미수", "slug": "tiramisu" }
+      ]
+    },
+    {
+      "name": "쿠키",
+      "slug": "cookie",
+      "subcategories": [
+        { "name": "초코칩 쿠키", "slug": "choc-chip-cookie" },
+        { "name": "오트밀 쿠키", "slug": "oatmeal-cookie" },
+        { "name": "땅콩버터 쿠키", "slug": "peanut-butter-cookie" },
+        { "name": "쇼트브레드 쿠키", "slug": "shortbread-cookie" },
+        { "name": "마카롱", "slug": "macaron" }
+      ]
+    },
+    {
+      "name": "타르트, 파이",
+      "slug": "tart-pie",
+      "subcategories": [
+        { "name": "레몬 타르트", "slug": "lemon-tart" },
+        { "name": "애플 파이", "slug": "apple-pie" },
+        { "name": "피칸 파이", "slug": "pecan-pie" },
+        { "name": "베리 타르트", "slug": "berry-tart" },
+        { "name": "초콜릿 타르트", "slug": "chocolate-tart" }
+      ]
+    },
+    {
+      "name": "팬케이크",
+      "slug": "pancake",
+      "subcategories": [
+        { "name": "플레인 팬케이크", "slug": "plain-pancake" },
+        { "name": "블루베리 팬케이크", "slug": "blueberry-pancake" },
+        { "name": "바나나 팬케이크", "slug": "banana-pancake" },
+        { "name": "초콜릿 팬케이크", "slug": "chocolate-pancake" },
+        { "name": "딸기 팬케이크", "slug": "strawberry-pancake" }
+      ]
+    }
+  ]
+}

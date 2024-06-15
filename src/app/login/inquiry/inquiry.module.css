@@ -13,7 +13,7 @@
   position: relative;
   margin-bottom: 32px;
 }
-.content{
+.content {
   padding: 0 16px;
 }
 .title {
@@ -59,7 +59,7 @@
   flex-grow: 0;
 }
 .input::placeholder {
-  color: rgba(0, 0, 0, 0.3); 
+  color: rgba(0, 0, 0, 0.3);
 }
 .input,
 .textarea {
@@ -110,7 +110,7 @@
   margin-top: 377px;
 }
 .btnActive {
-  background: #ef4444;
+  background: var(--pointColor);
   color: #ffffff;
 }
 

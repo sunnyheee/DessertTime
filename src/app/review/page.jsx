@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import Footer from '../components/common/Footer'
+import Footer from '../_components/common/Footer'
 import styles from './page.module.css'
-import Header from '../components/common/Header'
-import EditIcon from '../components/icon/EditIcon'
+import Header from '../_components/common/Header'
+import EditIcon from '../_components/icon/EditIcon'
 
 const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)
@@ -50,7 +50,7 @@ const Reviewpage = () => {
 
   const handleWriteClick = () => {
     setClicked(true)
-    setIconColor({ fill: '#ef4444', stroke: '#ef4444' })
+    setIconColor({ fill: 'var(--pointColor);', stroke: 'var(--pointColor);' })
 
     setTimeout(() => {
       setClicked(false)
@@ -60,7 +60,7 @@ const Reviewpage = () => {
 
   return (
     <>
-      <main className="main">
+      <section className="sec">
         <div className={styles.homeSec}>
           <div className={styles.header1}>
             <Header
@@ -144,7 +144,7 @@ const Reviewpage = () => {
             </button>
           </div>
         </div>
-      </main>
+      </section>
       <Footer activeButton="review" />
 
       {showModal && (

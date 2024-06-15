@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Script from 'next/script'
 import styles from './AddAdiminInfo.module.css'
-import Button from '../../../components/common/Button'
+import Button from '../../../_components/common/Button'
 
 function AddAdiminInfo({ onComplete }) {
   const router = useRouter()

@@ -25,7 +25,7 @@
   width: 36px;
   height: 18px;
   font-size: 11px;
-  background-color: #ef4444;
+  background-color: var(--pointColor);
   color: white;
   border-radius: 20px;
   box-sizing: border-box;
@@ -105,9 +105,8 @@
 }
 
 .write.clicked {
-  background-color: #ef4444; 
+  background-color: var(--pointColor);
 }
-
 
 .dotsButton {
   display: flex;
@@ -255,15 +254,16 @@
 
 .cancelButton:hover,
 .confirmButton:hover {
-  color: #ef4444;
+  color: var(--pointColor);
 }
 
 .upload {
   position: fixed;
   bottom: 82px;
-  width: 446px;
+  max-width: 446px;
+  width: 100%;
   padding: 18px 16px;
-
+  box-sizing: border-box;
   font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
@@ -274,10 +274,10 @@
   text-align: center;
   letter-spacing: 0.38px;
   color: #ffffff;
-  background-color: #ef4444;
+  background-color: var(--pointColor);
   border-radius: 13px;
   border: none;
 }
 .active {
-  background-color: #ef4444;
+  background-color: var(--pointColor);
 }
