@@ -1,12 +1,14 @@
 import React from 'react'
 import Footer from '../_components/common/Footer'
+import Header from '../_components/common/Header'
 
 const Heartpage = () => {
   return (
     <>
-      <main className="main">
+      <Header title="Heartpage" showMainLogo={false} />
+      <section className="sec">
         <div>Heartpage</div>
-      </main>
+      </section>
       <Footer activeButton="heart" />
     </>
   )
