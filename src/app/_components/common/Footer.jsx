@@ -25,7 +25,9 @@ const Footer = ({ activeButton }) => {
           href={`/${item.label}`}
         >
           <item.component
-            stroke={activeButton === item.label ? '#EF4444' : '#9A9C9F'}
+            stroke={
+              activeButton === item.label ? 'var(--pointColor)' : '#9A9C9F'
+            }
           />
           <div className={styles.name}>{item.name}</div>
         </Link>

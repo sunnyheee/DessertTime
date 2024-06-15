@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import styles from './AddAdiminTaste.module.css'
-import Button from '../../../components/common/Button'
+import Button from '../../../_components/common/Button'
 
 function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
   const [preferences, setPreferences] = useState([])

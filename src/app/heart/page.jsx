@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../components/common/Footer'
+import Footer from '../_components/common/Footer'
 
 const Heartpage = () => {
   return (
