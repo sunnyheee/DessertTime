@@ -14,17 +14,11 @@ const CategoryPage = () => {
     setActiveCategory(activeCategory === index ? null : index)
   }
 
-  const handleKeyPress = (event, index) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      handleCategoryClick(index)
-    }
-  }
-
   return (
     <>
       <Header title="카테고리" showMainLogo={false} />
       <section className="sec">
-        <div className="content">
+        <div className={styles.content}>
           <p className={styles.description}>
             후기가 궁금한 디저트를 찾아보세요
           </p>

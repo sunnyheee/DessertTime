@@ -1,0 +1,91 @@
+.content {
+  padding: 3rem 1.5rem;
+}
+.title {
+  font-size: var(--fz20);
+  font-weight: 600;
+}
+.itemBox {
+  margin-top: 2.3rem;
+}
+.item {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  margin-bottom: 1.4rem;
+  padding: 2rem;
+}
+.itemInfo {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+.userInfo span {
+  font-size: var(--fz12);
+  color: #999999;
+}
+.itemImages {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.7rem;
+}
+.itemImagesBox {
+  width: calc(100% / 4 - 0.7rem);
+  overflow: hidden;
+  border-radius: 10px;
+}
+.itemImages img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.likeInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.likeInfo span {
+  color: #999999;
+  font-size: var(--fz14);
+}
+.itemContent {
+  margin-top: 1.5rem;
+}
+.itemContent p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(3, 3, 3, 0.6);
+  font-size: var(--fz12);
+}
+
+.shopTitle {
+  font-size: var(--fz20);
+  margin-top: 1.5rem;
+}
+.shopTitle .shopTitlebold {
+  font-weight: 600;
+  margin-left: 0.8rem;
+}
+.ingredientList {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.ingredientList li {
+  font-size: var(--fz12);
+  color: var(--pointColor);
+  background-color: #ffe0e0;
+  border-radius: 20px;
+  padding: 0.2rem 1.4rem;
+}
+.noReview {
+  font-size: var(--fz16);
+  margin-top: 1.5rem;
+}

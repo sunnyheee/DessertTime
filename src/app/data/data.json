@@ -50,7 +50,56 @@
       "subcategories": [
         { "name": "개성주악", "slug": "gaeseong-juak" },
         { "name": "달고나", "slug": "dalgona" },
-        { "name": "약과", "slug": "yakgwa" },
+        {
+          "name": "약과",
+          "slug": "yakgwa",
+          "items": [
+            {
+              "id": 1,
+              "username": "130번째달달한고구마",
+              "usericon": "usericon01.png",
+              "date": "24.06.01",
+              "shopname": "장인더",
+              "kind": "약과찰떡",
+              "star": 4,
+              "like": 100,
+              "img": ["comment-img03.jpg", "comment-img04.jpg"],
+              "comment": "약과찰떡은 말 그대로 약과에 찰떡이 들어가있는 약과에요. 무화과, 완두콩, 팥, 병아리콩, 호두, 크랜베리, 건포도도 들어가있어 맛있어요!",
+              "ingredient": ["채소/향신료", "과일/견과", "크림/치즈/유제품"]
+            },
+            {
+              "id": 2,
+              "username": "산꼭대기의큰블루베리마카롱",
+              "usericon": "usericon02.png",
+              "date": "24.04.01",
+              "shopname": "청라곳간",
+              "kind": "약과찰떡",
+              "star": 5,
+              "like": 78,
+              "img": [
+                "comment-img03.jpg",
+                "comment-img04.jpg",
+                "comment-img03.jpg",
+                "comment-img04.jpg"
+              ],
+              "comment": "약과 아이스크림은 약과 위에 살짝 쫀득한 아이스크림이 올려져 있는데요. 이렇게 같이 먹으니까 달달함이 두 배로 커져 스트레스 풀리는 느낌이 들더라고요.",
+              "ingredient": ["과일/견과", "크림/치즈/유제품"]
+            },
+            {
+              "id": 3,
+              "username": "신선한블루베리마카롱",
+              "usericon": "usericon01.png",
+              "date": "24.02.01",
+              "shopname": "청라곳간",
+              "kind": "약과찰떡",
+              "star": 4,
+              "like": 20,
+              "img": ["comment-img03.jpg", "comment-img04.jpg"],
+              "comment": "약과 아이스크림은 약과 위에 살짝 쫀득한 아이스크림이 올려져 있는데요. 이렇게 같이 먹으니까 달달함이 두 배로 커져 스트레스 풀리는 느낌이 들더라고요.",
+              "ingredient": ["채소/향신료", "과일/견과"]
+            }
+          ]
+        },
         { "name": "양갱", "slug": "yanggaeng" },
         { "name": "유과", "slug": "yugwa" }
       ]
