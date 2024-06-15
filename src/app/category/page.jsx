@@ -1,10 +1,11 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import Footer from '../components/common/Footer'
-import Header from '../components/common/Header'
+import Footer from '../_components/common/Footer'
+import Header from '../_components/common/Header'
 import data from '../data/data.json'
 import styles from './page.module.css'
+import CategoryArrowIcon from '../_components/icon/CategoryArrowIcon'
 
 const CategoryPage = () => {
   const [activeCategory, setActiveCategory] = useState(null)
@@ -21,23 +22,23 @@ const CategoryPage = () => {
 
   return (
     <>
-      <Header title="카테고리" />
+      <Header title="카테고리" showMainLogo={false} />
       <section className="sec">
         <p className={styles.description}>후기가 궁금한 디저트를 찾아보세요</p>
         <ul className={styles.categoryList}>
           {data.categories.map((category, index) => (
-            <li key={index} className={styles.categoryItem}>
+            <li key={category.slug} className={styles.categoryItem}>
               <button
                 type="button"
                 className={styles.categoryHeader}
                 onClick={() => handleCategoryClick(index)}
-                onKeyPress={(event) => handleKeyPress(event, index)}
-                tabIndex="0"
               >
                 {category.name}
-                <span
-                  className={`${styles.arrow} ${activeCategory === index ? styles.arrowDown : ''}`}
-                ></span>
+                <CategoryArrowIcon
+                  stroke={
+                    activeCategory === index ? 'var(--pointColor)' : '#404040'
+                  }
+                />
               </button>
               {activeCategory === index && (
                 <ul className={styles.subcategoryList}>

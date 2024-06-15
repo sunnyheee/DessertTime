@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import Footer from '../components/common/Footer'
+import Footer from '../_components/common/Footer'
 import styles from './page.module.css'
-import Header from '../components/common/Header'
-import EditIcon from '../components/icon/EditIcon'
+import Header from '../_components/common/Header'
+import EditIcon from '../_components/icon/EditIcon'
 
 const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)

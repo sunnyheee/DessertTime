@@ -4,9 +4,9 @@ import 'swiper/swiper-bundle.css'
 import { Pagination, Autoplay } from 'swiper/modules'
 import Image from 'next/image'
 import styles from './page.module.css'
-import Footer from './components/common/Footer'
+import Footer from './_components/common/Footer'
 import './root.css'
-import Header from './components/common/Header'
+import Header from './_components/common/Header'
 
 export default function Home() {
   const slides = ['/images/image1.png', '/images/image2.png']
@@ -53,9 +53,9 @@ export default function Home() {
   return (
     <>
       <section className={styles.homeSec}>
-      <div className={styles.header1}> 
-         <Header showBackButton = {false} showIcons = {true} showMainLogo = {true}  />
-         </div>
+        <div className={styles.header1}>
+          <Header showBackButton={false} showIcons={true} showMainLogo={true} />
+        </div>
         <Swiper
           spaceBetween={8}
           slidesPerView={1}
