@@ -1,12 +1,14 @@
 import React from 'react'
 import Footer from '../_components/common/Footer'
+import Header from '../_components/common/Header'
 
 const Mypage = () => {
   return (
     <>
-      <main className="main">
+      <Header title="Mypage" showMainLogo={false} />
+      <section className="sec">
         <div>Mypage</div>
-      </main>
+      </section>
       <Footer activeButton="mypage" />
     </>
   )
