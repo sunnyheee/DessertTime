@@ -65,3 +65,6 @@
 .sec {
   min-height: calc(100vh - 133px);
 }
+.sec.bg {
+  background-color: #f4f4f4;
+}

@@ -79,6 +79,7 @@ time,
 mark,
 audio,
 video {
+  color: #030303;
   margin: 0;
   padding: 0;
   border: 0;
@@ -90,6 +91,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  color: #030303;
   font-size: var(--fz16);
   line-height: 1.6;
 }
@@ -143,7 +145,7 @@ button {
   appearance: none; /* 기본 스타일 제거 */
 }
 a {
-  color: #333;
+  color: #030303;
   text-decoration: none;
 }
 button {
