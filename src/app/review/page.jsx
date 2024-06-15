@@ -50,7 +50,7 @@ const Reviewpage = () => {
 
   const handleWriteClick = () => {
     setClicked(true)
-    setIconColor({ fill: '#ef4444', stroke: '#ef4444' })
+    setIconColor({ fill: '#fff', stroke: '#fff' })
 
     setTimeout(() => {
       setClicked(false)
