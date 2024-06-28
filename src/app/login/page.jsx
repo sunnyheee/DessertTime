@@ -63,7 +63,7 @@ const Loginpage = () => {
             />
           </button>
         </div>
-        <a href="/login/inquiry" className={styles.txt}>
+        <a href="/inquiry" className={styles.txt}>
           <p className={styles.txt}>문의하기</p>
         </a>
       </div>

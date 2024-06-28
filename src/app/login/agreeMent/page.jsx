@@ -28,7 +28,7 @@ export default function AgreeMent() {
   const handlePrevButtonClick = () => {
     router.push('/login')
   }
-  // 다음버튼 클릭시 추가정보입력으로 이동
+
   const handleSubmit = (e) => {
     router.push('/login/addadmin')
   }

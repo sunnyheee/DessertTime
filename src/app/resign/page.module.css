@@ -1,0 +1,147 @@
+.wrap {
+  padding: 8px 28px 18px;
+
+}
+.guide {
+  padding: 12px 0 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.title {
+  font-style: normal;
+  font-weight: 510;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #030303;
+}
+.explanation {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.6);
+}
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-image: url('/images/checkbox.png');
+  background-size: cover;
+  background-position: center;
+}
+.checkbox:checked + .agree {
+  color: #000;
+}
+.check {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+.check:nth-child(1) {
+  margin-top: 11px;
+}
+.agree {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(3, 3, 3, 0.6);
+  margin-left: 12px;
+}
+.textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+
+.textarea {
+  padding: 12px;
+  height: 138px;
+  background-color: #f4f4f4;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  font-feature-settings: 'case' on;
+  resize: none;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+}
+.textarea:focus {
+    outline: none;
+    border: 1px solid #068dff;
+    background-color: white;
+  }
+  
+  .textarea::placeholder {
+    font-feature-settings: 'case' on;
+    color: rgba(3, 3, 3, 0.6);
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    gap: 9px;
+  }
+  @media (min-height: 600px) {
+    .buttonContainer {
+      margin-top: 100px; 
+    }
+  }
+  
+  
+  @media (min-height: 800px) {
+    .buttonContainer {
+      margin-top: 195px;
+    }
+  }
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px auto;
+    gap: 10px;
+    height: 61px;
+    border: none;
+    border-radius: 13px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.38px;
+  }
+  
+  .prevbtn {
+    flex: 2;
+    background: #ef4444;
+    color: #fff;
+  }
+  
+  .nextbtn {
+    flex: 1;
+    background: #F4F4F4;
+    color: #4E4E4E;
+  }
+  
+  .nextbtnActive {
+    background: var(--pointColor);
+    color: #ffffff;
+  }
+  
