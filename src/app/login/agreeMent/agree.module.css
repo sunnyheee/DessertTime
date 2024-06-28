@@ -14,7 +14,6 @@
 .headtxt {
   margin-top: 10px;
   margin-bottom: 20px;
-  font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 600;
   font-size: 30px;
@@ -81,14 +80,14 @@
   margin-top: 211px;
   gap: 9px;
 }
-@media (min-width: 600px) {
+@media (min-height: 600px) {
   .buttonContainer {
     margin-top: 300px; 
   }
 }
 
 
-@media (min-width: 800px) {
+@media (min-height: 800px) {
   .buttonContainer {
     margin-top: 467px;
   }
@@ -103,7 +102,6 @@
   height: 61px;
   border: none;
   border-radius: 13px;
-  font-family: 'SF Pro Display';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;

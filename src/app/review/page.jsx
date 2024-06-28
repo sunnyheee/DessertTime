@@ -5,6 +5,7 @@ import Footer from '../_components/common/Footer'
 import styles from './page.module.css'
 import Header from '../_components/common/Header'
 import EditIcon from '../_components/icon/EditIcon'
+import { useRouter } from 'next/navigation'
 
 const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)
@@ -15,7 +16,8 @@ const Reviewpage = () => {
     fill: '#828282',
     stroke: '#828282',
   })
-
+  const [showAlertText, setShowAlertText] = useState(false) 
+  const router = useRouter()
   useEffect(() => {
     const updateDaysLeft = () => {
       const now = new Date()
@@ -50,17 +52,23 @@ const Reviewpage = () => {
 
   const handleWriteClick = () => {
     setClicked(true)
-    setIconColor({ fill: 'var(--pointColor);', stroke: 'var(--pointColor);' })
+    setIconColor({ fill: '#fff', stroke: '#fff' })
 
     setTimeout(() => {
       setClicked(false)
       setIconColor({ fill: '#828282', stroke: '#828282' })
     }, 500)
+  
+  router.push('/review/write')
+  }
+
+  const handleAlertClick = () => {
+    setShowAlertText((prev) => !prev)
   }
 
   return (
     <>
-      <main className="main">
+      <section className="sec">
         <div className={styles.homeSec}>
           <div className={styles.header1}>
             <Header
@@ -78,14 +86,21 @@ const Reviewpage = () => {
               </div>
               <div className={styles.subright}>
                 <p>{daysLeft}일 남았어요!</p>
-                <Image
-                  src="/images/alertcircle.png"
-                  alt="alert"
-                  width={14}
-                  height={14}
-                  style={{ cursor: 'pointer' }}
-                  className={styles.alert}
-                />
+                <div className={styles.alertWrapper}>
+                  <Image
+                    src="/images/alertcircle.png"
+                    alt="alert"
+                    width={14}
+                    height={14}
+                    className={styles.alert}
+                    onClick={handleAlertClick}
+                  />
+                  {showAlertText && (
+                    <div className={styles.alertText}>
+                      구매하신 달에만 작성할 수 있어요.
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <div className={styles.review}>
@@ -99,7 +114,6 @@ const Reviewpage = () => {
                   onClick={handleWriteClick}
                   type="button"
                 >
-                  {/* SVG를 컴포넌트로 만들었어요! */}
                   <EditIcon fill={iconColor.fill} stroke={iconColor.stroke} />
                 </button>
                 <button

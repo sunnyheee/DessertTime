@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import styles from './inquiry.module.css'
-import Header from '../../_components/common/Header'
+import Header from '../_components/common/Header'
 import { useRouter } from 'next/navigation'
 
 export default function Inquiry() {
@@ -31,7 +31,7 @@ export default function Inquiry() {
   }
 
   const handleSubmit = () => {
-    router.push('/login/success')
+    router.push('/inquiry/success')
   }
 
   return (

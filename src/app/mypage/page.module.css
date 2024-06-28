@@ -1,0 +1,142 @@
+.wrap {
+  background-color: #f4f4f4;
+  min-height: calc(100vh - 66px);
+}
+.setting {
+  padding: 21px 22px 22px 22px;
+  cursor: pointer;
+}
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.profile {
+  margin-bottom: 20px;
+}
+.nickname {
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #030303;
+  margin-bottom: 8px;
+}
+.correction {
+  padding: 8px 14px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #54575c;
+  background-color: white;
+  border-radius: 16.5px;
+  margin-bottom: 20px;
+}
+.chevronRight{
+    cursor: pointer;
+}
+.firstWrap {
+    display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+.txtWrap{
+    display: flex;
+    gap: 4px;
+}
+.meal{
+    margin-top: 2px;
+}
+.myReview {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  padding: 17px 20px;
+  justify-content: space-between;
+
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.left {
+  font-style: normal;
+  font-weight: 510;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #404040;
+}
+.txt{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 510;
+font-size: 16px;
+line-height: 150%;
+text-align: right;
+letter-spacing: -0.02em;
+color: #030303;
+}
+.boxImage{
+    margin-right: 16px;
+}
+.twiceWrap{
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+    height: 100%;
+
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background-color: white;
+    cursor: pointer;
+}
+.box:nth-child(1){
+    border: 1px solid #EBEBEB;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.box:nth-child(2){
+    border-left: 1px solid #EBEBEB;
+    border-right: 1px solid #EBEBEB;
+}
+.box:nth-child(3){
+    border: 1px solid #EBEBEB;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.chevronRight{
+  margin-bottom: 2px;
+}
+.boxTxt{
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+color: #404040;
+}
