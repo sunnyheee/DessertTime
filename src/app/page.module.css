@@ -1,4 +1,3 @@
-
 .homeSec {
   padding: 5.5rem 0 4rem;
 }
@@ -13,10 +12,8 @@
   background-color: white;
 }
 
-
 .swiperContainer {
   padding-top: 2rem;
-
 }
 
 .reviewtxt {
@@ -45,11 +42,14 @@
 }
 
 .swiperSlide2 {
-  width: 106px;
+  max-width: 106px;
   height: 140px;
   border-radius: 10px;
 }
-
+.swiperSlide2 img {
+  object-fit: cover;
+  width: 100%;
+}
 .swiper-pagination {
   position: absolute;
   bottom: -25px;
