@@ -17,6 +17,25 @@
   --fz48: 4.8rem;
   --fz80: 8rem;
   --pointColor: #ef4444;
+  --swiper-theme-color: #ef4444;
+}
+.swiper-pagination-bullet {
+  background-color: #f4f4f4 !important;
+  opacity: 0.8 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #ef4444 !important;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--swiper-theme-color) !important;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 0px);
+  color: var(--swiper-theme-color) !important;
 }
 @media screen and (max-width: 640px) {
   :root {

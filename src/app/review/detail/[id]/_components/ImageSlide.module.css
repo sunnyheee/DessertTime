@@ -1,0 +1,9 @@
+.slidewrap img {
+  width: 100%;
+  object-fit: cover;
+  display: flex;
+}
+.slidewrap {
+  margin-top: 1.5rem;
+  border-radius: 20px;
+}

@@ -1,32 +1,22 @@
-'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Header from '../../_components/common/Header'
 import Footer from '../../_components/common/Footer'
-import data from '../../data/data.json'
 import styles from './page.module.css'
 import ItemHeartIcon from '../../_components/icon/ItemHeartIcon'
 import StarIcon from '../../_components/icon/StarIcon'
+import { getSlugDummyData } from '../../api/route'
 
-const CategorySlugPage = ({ params }) => {
+const CategorySlugPage = async ({ params }) => {
   const { slug } = params
+  const categoryData = await getSlugDummyData(slug)
 
-  if (!slug) {
-    return <div>Loading...</div>
+  if (!categoryData) {
+    return <div>Category not found</div>
   }
 
-  let categoryName = 'Category'
-  let subcategoryItems = []
-
-  data.categories.forEach((category) => {
-    category.subcategories.forEach((subcategory) => {
-      if (subcategory.slug === slug) {
-        categoryName = subcategory.name
-        subcategoryItems = subcategory.items
-      }
-    })
-  })
+  const { name: categoryName, items: subcategoryItems } = categoryData
 
   return (
     <>
