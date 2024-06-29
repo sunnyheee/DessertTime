@@ -81,3 +81,10 @@
   font-size: var(--fz16);
   margin-top: 1.5rem;
 }
+.starBox {
+  display: flex;
+}
+.starBox svg {
+  margin-right: 0.3rem;
+  cursor: none;
+}

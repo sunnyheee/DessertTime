@@ -45,9 +45,11 @@ const ReviewDetail = async ({ params }) => {
             <span className={styles.shopTitlebold}>{reviewData.kind}</span>
           </h3>
           <div className={styles.starBox}>
-            {[...Array(5)].map((_, index) => (
+            {[...Array(4)].map((_, index) => (
               <StarIcon
                 key={index}
+                width="23"
+                height="26"
                 fill={index < reviewData.star ? '#FFA629' : 'lightgray'}
               />
             ))}
