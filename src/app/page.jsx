@@ -5,7 +5,6 @@ import { Pagination, Autoplay } from 'swiper/modules'
 import Image from 'next/image'
 import styles from './page.module.css'
 import Footer from './_components/common/Footer'
-import './root.css'
 import Header from './_components/common/Header'
 
 export default function Home() {

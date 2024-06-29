@@ -13,6 +13,7 @@
     "prefer-default-export": "off",
     "react/function-component-definition": "off",
     "arrow-body-style": "off",
+    "react/no-array-index-key": "off",
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
