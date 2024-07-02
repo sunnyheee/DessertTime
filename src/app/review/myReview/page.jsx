@@ -5,6 +5,7 @@ import Header from '../../_components/common/Header'
 import Footer from '../../_components/common/Footer'
 import Image from 'next/image'
 import StarIcon from '../../_components/icon/StarIcon'
+import { useRouter } from 'next/navigation'
 
 const MyReview = () => {
   const reviews = [
@@ -40,26 +41,32 @@ const MyReview = () => {
     },
   ]
 
+  const router = useRouter()
+  
   const [showModal, setShowModal] = useState(false)
   const [activeReviewId, setActiveReviewId] = useState(null)
   const [deleteReviewId, setDeleteReviewId] = useState(null)
 
   const handleConfirmDelete = () => {
     setShowModal(false)
-
   }
 
   const handleCancelDelete = () => {
     setShowModal(false)
   }
 
-  const handleDotsClick = (id) => {
+  const handleDotsClick = (id, event) => {
+    event.stopPropagation()
     setActiveReviewId(prevState => prevState === id ? null : id)
   }
 
   const handleDeleteClick = (reviewId) => {
     setDeleteReviewId(reviewId)
     setShowModal(true)
+  }
+
+  const handleContainerClick = () => {
+    router.push('/')
   }
 
   const getStatusText = (state) => {
@@ -102,7 +109,7 @@ const MyReview = () => {
                     backgroundColor: status.backgroundColor,
                   }
                   return (
-                    <div key={review.id} className={styles.container}>
+                    <div key={review.id} className={styles.container} onClick={handleContainerClick}>
                       {review.state === 0 && (
                         <div className={styles.overlay}>
                           관리자에 의해 삭제된 후기입니다.
@@ -138,9 +145,9 @@ const MyReview = () => {
                           <p className={styles.state} style={stateStyle}>
                             {status.text}
                           </p>
-                          <button
+                          <div
                             className={styles.dotsButton}
-                            onClick={() => handleDotsClick(review.id)}
+                            onClick={(event) => handleDotsClick(review.id, event)}
                             type="button"
                           >
                             <div
@@ -154,7 +161,7 @@ const MyReview = () => {
                             ></div>
                             <div className={styles.deletewrap}>
                               {activeReviewId === review.id && (
-                                <button
+                                <di
                                   className={`${styles.deleteContainer} ${styles.showDeleteContainer}`}
                                   onClick={() => handleDeleteClick(review.id)}
                                   type="button"
@@ -168,10 +175,10 @@ const MyReview = () => {
                                   <button className={styles.deleteButton} type="button">
                                     삭제하기
                                   </button>
-                                </button>
+                                </di>
                               )}
                             </div>
-                          </button>
+                          </div>
                         </div>
                       </div>
                     </div>
