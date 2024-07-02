@@ -16,6 +16,7 @@
   color: rgba(3, 3, 3, 0.5);
 }
 .container {
+  cursor: pointer;
   width: 100%;
   background-color: white;
   padding: 12px 8px 12px 12px;

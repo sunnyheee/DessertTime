@@ -1,0 +1,61 @@
+.wrap {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+.container {
+  padding: 20px;
+}
+.notice,
+.event {
+  display: inline-block;
+  padding: 4px 12px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  background-color: inherit;
+  color: #888;
+  border-color: #888;
+  font-size: 14px;
+  border: 1px solid #888;
+  text-align: center;
+}
+.event {
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+.content {
+  width: 100%;
+  background-color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  margin-bottom: 8px;
+}
+.content:last-child{
+    margin-bottom: 0;
+}
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #030303;
+  margin-bottom: 8px;
+}
+.date {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #888888;
+}
+.active {
+    background-color: #ef4444; /* 활성화된 탭의 배경색 */
+    color: #fff; /* 활성화된 탭의 글자색 */
+    border-color: #ef4444; /* 활성화된 탭의 보더색 */
+  }
+  

@@ -38,12 +38,12 @@
 
 .swiperSlide {
   width: 344px;
-  height: 214px;
+  max-height: 214px;
 }
 
 .swiperSlide2 {
   max-width: 106px;
-  height: 140px;
+  max-height: 140px;
   border-radius: 10px;
 }
 .swiperSlide2 img {
