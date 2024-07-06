@@ -111,17 +111,11 @@ const MyReview = () => {
   return (
     <section className="sec">
       <div className={styles.wrap}>
-        <Header
-          title="내 후기"
-          showBackButton={true}
-          showIcons={true}
-          showMainLogo={false}
-        />
+        <Header title="내 후기" showMainLogo={false} />
         {Object.keys(groupedReviews).map((key) => {
           const [year, month] = key.split('-')
           return (
             <div key={key} className={styles.content}>
-            
               <p className={styles.date}>{`${year}년 ${month}월`}</p>
               {groupedReviews[key].map((review) => {
                 const status = getStatusText(review.state)

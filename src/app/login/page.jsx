@@ -1,9 +1,9 @@
 'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
-import { KaKaohandleLogin } from './social/kakaoLogin'
-import { NaverhandleLogin } from './social/naverLogin'
-import { GooglehandleLogin } from './social/googleLogin'
+import KaKaohandleLogin from './social/kakaoLogin'
+import NaverhandleLogin from './social/naverLogin'
+import GooglehandleLogin from './social/googleLogin'
 
 const Loginpage = () => {
   return (

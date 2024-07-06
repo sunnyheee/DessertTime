@@ -1,11 +1,11 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import Footer from '../_components/common/Footer'
 import styles from './page.module.css'
 import Header from '../_components/common/Header'
 import EditIcon from '../_components/icon/EditIcon'
-import { useRouter } from 'next/navigation'
 
 const Reviewpage = () => {
   const [daysLeft, setDaysLeft] = useState(0)
@@ -16,7 +16,7 @@ const Reviewpage = () => {
     fill: '#828282',
     stroke: '#828282',
   })
-  const [showAlertText, setShowAlertText] = useState(false) 
+  const [showAlertText, setShowAlertText] = useState(false)
   const router = useRouter()
   useEffect(() => {
     const updateDaysLeft = () => {
@@ -58,8 +58,8 @@ const Reviewpage = () => {
       setClicked(false)
       setIconColor({ fill: '#828282', stroke: '#828282' })
     }, 500)
-  
-  router.push('/review/write')
+
+    router.push('/review/write')
   }
 
   const handleAlertClick = () => {

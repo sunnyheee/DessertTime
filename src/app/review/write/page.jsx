@@ -70,7 +70,6 @@ const ReviewWritepage = () => {
   }
   const handleback = () => {
     setShowModal(false)
-
   }
 
   const handleFinish = () => {
@@ -117,18 +116,18 @@ const ReviewWritepage = () => {
   }
 
   const handleCategoryInputChange = (event) => {
-    const input = event.target.value;
-    setCategoryInput(input);
+    const input = event.target.value
+    setCategoryInput(input)
     if (input) {
-      const escapedInput = input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const escapedInput = input.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
       const filtered = categoryNames
         .filter((category) => new RegExp(escapedInput, 'gi').test(category))
-        .slice(0, 100);
-      setFilteredCategories(filtered);
+        .slice(0, 100)
+      setFilteredCategories(filtered)
     } else {
-      setFilteredCategories([]);
+      setFilteredCategories([])
     }
-  };
+  }
 
   const handleCategorySelect = (category) => {
     setCategoryInput(category)
@@ -136,10 +135,10 @@ const ReviewWritepage = () => {
   }
 
   const highlightText = (text, highlight) => {
-    const escapedHighlight = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  
-    const parts = text.split(new RegExp(`(${escapedHighlight})`, 'gi'));
-  
+    const escapedHighlight = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+    const parts = text.split(new RegExp(`(${escapedHighlight})`, 'gi'))
+
     return (
       <span>
         {parts.map((part, index) =>
@@ -164,12 +163,7 @@ const ReviewWritepage = () => {
       <section className="sec">
         <div className={styles.homeSec}>
           <div className={styles.header1}>
-            <Header
-              title="후기작성"
-              showBackButton={true}
-              showIcons={true}
-              showMainLogo={false}
-            />
+            <Header title="후기작성" showMainLogo={false} />
           </div>
           <div className={styles.container}>
             <div className={styles.inputWrap}>
@@ -197,24 +191,24 @@ const ReviewWritepage = () => {
                   onChange={handleCategoryInputChange}
                 />
                 {filteredCategories.length > 0 && (
-      <div className={styles.dropdown}>
-        {filteredCategories.map((category, index) => (
-          <div
-            key={index}
-            className={styles.dropdownItem}
-            onClick={() => handleCategorySelect(category)}
-          >
-            {highlightText(category, categoryInput)}
-          </div>
-        ))}
-        <div
-          className={`${styles.dropdownItem} ${styles.etc}`}
-          onClick={() => handleCategorySelect('기타')}
-        >
-          찾는 카테고리가 없어요.
-        </div>
-      </div>
-    )}
+                  <div className={styles.dropdown}>
+                    {filteredCategories.map((category, index) => (
+                      <div
+                        key={index}
+                        className={styles.dropdownItem}
+                        onClick={() => handleCategorySelect(category)}
+                      >
+                        {highlightText(category, categoryInput)}
+                      </div>
+                    ))}
+                    <div
+                      className={`${styles.dropdownItem} ${styles.etc}`}
+                      onClick={() => handleCategorySelect('기타')}
+                    >
+                      찾는 카테고리가 없어요.
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.choice}>
@@ -289,6 +283,7 @@ const ReviewWritepage = () => {
                       <button
                         className={styles.deleteButton}
                         onClick={() => handleImageDelete(index)}
+                        type="button"
                       >
                         <img
                           src="/images/imageCancle.png"
@@ -326,6 +321,7 @@ const ReviewWritepage = () => {
               className={`${styles.clearbtn} ${!isButtonEnabled ? styles.disabled : ''}`}
               disabled={!isButtonEnabled}
               onClick={handleDeleteClick}
+              type="button"
             >
               작성완료
             </button>
@@ -334,31 +330,32 @@ const ReviewWritepage = () => {
       </section>
       <Footer activeButton="review" />
       {showModal && (
-          <div className={styles.modal}>
-            <div className={styles.modalContent}>
-              <p className={styles.check}>
-              작성을 완료한 후기는 수정할 수 없습니다.<br/>
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <p className={styles.check}>
+              작성을 완료한 후기는 수정할 수 없습니다.
+              <br />
               이대로 등록하시겠습니까?
-              </p>
-              <div className={styles.modalButtons}>
-                <button
-                  className={`${styles.modalButton} ${styles.confirmButton}`}
-                  onClick={handleback}
-                  type="button"
-                >
-                  수정하기
-                </button>
-                <button
-                  className={`${styles.modalButton} ${styles.cancelButton}`}
-                  onClick={handleFinish}
-                  type="button"
-                >
-                  등록하기
-                </button>
-              </div>
+            </p>
+            <div className={styles.modalButtons}>
+              <button
+                className={`${styles.modalButton} ${styles.confirmButton}`}
+                onClick={handleback}
+                type="button"
+              >
+                수정하기
+              </button>
+              <button
+                className={`${styles.modalButton} ${styles.cancelButton}`}
+                onClick={handleFinish}
+                type="button"
+              >
+                등록하기
+              </button>
             </div>
           </div>
-        )}
+        </div>
+      )}
     </>
   )
 }

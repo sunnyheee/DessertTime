@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <section className={styles.homeSec}>
         <div className={styles.header1}>
-          <Header showBackButton={false} showIcons={true} showMainLogo={true} />
+          <Header showBackButton={false} />
         </div>
         <Swiper
           spaceBetween={8}
@@ -62,7 +62,6 @@ export default function Home() {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          loop={true}
           pagination={{ clickable: true }}
           modules={[Pagination, Autoplay]}
           className={styles.swiperContainer}
