@@ -100,6 +100,7 @@ const Mypage = () => {
                 />
                 <p className={styles.boxTxt}>문의사항</p>
               </a>
+             
             </div>
           </div>
         </div>
