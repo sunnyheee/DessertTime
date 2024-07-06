@@ -34,8 +34,8 @@ const Header = ({
       )}
       {showMainLogo && (
         <Image
-          src="/images/dessertTime.png"
-          alt="메인로고"
+          src="/images/headerlogo.svg"
+          alt="dessertTime"
           width={216}
           height={29}
           className={styles.mainLogo}
