@@ -43,34 +43,35 @@ export async function getReviewData(id) {
 }
 
 export default async function handler(req, res) {
-  const { slug, id } = req.query
+  const query = req?.query || {}
+  const { slug, id } = query
 
   try {
     if (slug) {
       const categoryData = await getSlugDummyData(slug)
       if (categoryData) {
-        res.status(200).json(categoryData)
+        res?.status(200).json(categoryData)
       } else {
-        res.status(404).json({ error: 'Category not found' })
+        res?.status(404).json({ error: 'Category not found' })
       }
     } else if (id) {
       const reviewData = await getReviewData(id)
       if (reviewData) {
-        res.status(200).json(reviewData)
+        res?.status(200).json(reviewData)
       } else {
-        res.status(404).json({ error: 'Review not found' })
+        res?.status(404).json({ error: 'Review not found' })
       }
     } else {
       const data = await getDummyData()
-      res.status(200).json(data)
+      res?.status(200).json(data)
     }
   } catch (error) {
-    res.status(500).json({ error: 'Failed to read data' })
+    res?.status(500).json({ error: 'Failed to read data' })
   }
 }
 
 // 실제데이터
-const BASE_URL = 'http://144.24.64.187:3000'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 export async function fetchCategories() {
   const response = await fetch(`${BASE_URL}/ctg_1`)
