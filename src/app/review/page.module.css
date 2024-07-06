@@ -15,7 +15,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  width: 480px;
+  max-width: 480px;
   height: 63px;
   box-sizing: border-box;
   background-color: white;
@@ -310,9 +310,8 @@
 .upload {
   position: fixed;
   bottom: 82px;
-  min-width: 361px;
-  max-width: 446px;
-  width: 100%;
+left: 11px;
+right: 16px;
   padding: 18px 16px;
   box-sizing: border-box;
   font-style: normal;
@@ -328,6 +327,7 @@
   border-radius: 13px;
   border: none;
 }
+
 .active {
   background-color: var(--pointColor);
 }

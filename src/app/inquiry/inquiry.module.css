@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  width: 100%;
+  max-width: 480px;
 }
 
 .head {
@@ -82,8 +84,7 @@
   resize: none;
 }
 .container {
-  min-width: 480px;
-  padding: 0 32px;
+ width: 100%;
 }
 
 .email,
