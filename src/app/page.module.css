@@ -13,7 +13,7 @@
 }
 
 .swiperContainer {
- margin-top: 8px;
+  margin-top: 8px;
 }
 
 .reviewtxt {
@@ -38,7 +38,7 @@
 
 .swiperSlide {
   width: 344px;
-
+  height: 241px;
 }
 
 .swiperSlide2 {
