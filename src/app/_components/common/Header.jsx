@@ -24,10 +24,10 @@ const Header = ({
     <div className={styles.head}>
       {showBackButton && (
         <Image
-          src="/images/icon.png"
+          src="/images/back.svg"
           alt="이전"
-          width={14}
-          height={14}
+          width={24}
+          height={24}
           onClick={prev}
           className={styles.backButton}
         />
