@@ -16,8 +16,14 @@
 .swiperContainer {
  margin-top: 8px;
  height: 241px;
+width: 100%;
+max-width: 480px;
 }
-
+.mainImage{
+  width: 100%;
+  height: 241px;
+  margin: 0
+}
 .reviewtxt {
   margin-bottom: 12px;
   font-size: 18px;
@@ -36,12 +42,10 @@
   background-color: #f0f0f0;
   border: 1px solid #ddd;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
-.swiperSlide {
-  width: 344px;
 
-}
 
 .swiperSlide2 {
   max-width: 106px;
