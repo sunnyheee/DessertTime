@@ -1,0 +1,234 @@
+.wrap {
+  padding: 0 24px;
+}
+.save {
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: rgba(3, 3, 3, 0.3);
+  cursor: pointer;
+  z-index: 99999999999999999999;
+}
+.imagebox {
+  position: relative;
+  width: 106px;
+  height: 106px;
+}
+.editIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ef4444;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.imageWrap {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-style: normal;
+  font-weight: 510;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #404040;
+  margin-bottom: 25px;
+}
+
+.checkButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 10px 14.5px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.164407px;
+  color: rgba(64, 64, 64, 0.6);
+}
+
+.checkButton.active {
+  background-color: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+.input:focus {
+  outline: none;
+}
+.title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #2b2b2b;
+  margin-left: 4px;
+}
+
+.genderBox {
+  display: flex;
+  gap: 9px;
+
+}
+.gender {
+    margin-top: 8px;
+    padding: 11.5px 69px;
+    box-sizing: border-box;
+  flex: 1;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.164407px;
+  color: #4e4e4e;
+}
+
+.gender.selected {
+    background-color: #FCDADA;
+    color: #ef4444;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .addSelection {
+    display: flex;
+    gap: 1rem;    
+  }
+  .genderOption {
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 11.5px 69px;
+    box-sizing: border-box;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.164407px;
+  color: #4e4e4e;
+  margin-bottom: 20px;
+  }
+  .addSelection .genderInput {
+    display: none;
+  }
+  .addSelection label {
+    width: 100%;
+  }
+  .addSelection input:checked + label {
+    background-color: #fcdada;
+    color: var(--pointColor);
+  }
+  .yearSelect,
+  .addressInput,.category {
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 1.6px solid #ebebeb;
+
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.011em;
+color: #404040;
+  }
+
+  .yearSelect {
+    margin-top: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('/images/calendar_today.svg') no-repeat right 1.8rem center;
+    margin-bottom: 20px;
+  }
+  
+  .addressInput {
+    margin-top: 8px;
+    padding-left: 1.8rem;
+    background: url('/images/search.svg') no-repeat right 1.8rem center;
+    background-size: 21px 21px;
+    margin-bottom: 20px;
+  }
+  .addBox {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .formContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  .buttonComplete {
+    background-color: var(--pointColor);
+    color: #fff;
+  }
+  .next {
+    flex: 2;
+  }
+  .prev {
+    flex: 1;
+    background-color: #f4f4f4;
+    color: #4e4e4e;
+  }
+
+  .category {
+    margin-top: 8px;
+    padding-left: 1.8rem;
+    background: url('/images/arrow.svg') no-repeat right 1.8rem center;
+    background-size: 21px 21px;
+    box-sizing: border-box;
+  }
