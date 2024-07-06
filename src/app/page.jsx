@@ -56,8 +56,9 @@ export default function Home() {
           <Header showBackButton={false} />
         </div>
         <Swiper
-          spaceBetween={8}
+          spaceBetween={0}
           slidesPerView={1}
+
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -68,11 +69,10 @@ export default function Home() {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className={styles.swiperSlide}>
-              <Image
+              <img
                 src={slide}
                 alt={`Slide ${index + 1}`}
-                width={480}
-                height={241}
+                className={styles.mainImage}
               />
             </SwiperSlide>
           ))}
