@@ -1,5 +1,7 @@
-"use client"
-import React, { useState } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Header from '../_components/common/Header';
 import styles from './page.module.css';
 
@@ -18,11 +20,21 @@ const NoticeEvent = () => {
     return data.sort((a, b) => new Date(b.date) - new Date(a.date));
   };
 
+  const router = useRouter();
+  const queryParams = new URLSearchParams(window.location.search);
+  const initialTab = queryParams.get('tab') === 'event' ? 'event' : 'notice';
 
-  const [activeTab, setActiveTab] = useState('notice'); 
-  const [contents, setContents] = useState(sortByDate([...notice])); 
+  const [activeTab, setActiveTab] = useState(initialTab); 
+  const [contents, setContents] = useState(sortByDate(initialTab === 'notice' ? [...notice] : [...event])); 
+
+  useEffect(() => {
+    const tab = queryParams.get('tab') === 'event' ? 'event' : 'notice';
+    setActiveTab(tab);
+    setContents(sortByDate(tab === 'notice' ? [...notice] : [...event]));
+  }, [queryParams]);
 
   const handleTabClick = (tab) => {
+    router.push(`/noticeEvent?tab=${tab}`);
     setActiveTab(tab);
     setContents(sortByDate(tab === 'notice' ? [...notice] : [...event]));
   };
