@@ -310,7 +310,6 @@
 .upload {
   position: fixed;
   bottom: 82px;
-  max-width: 446px;
   width: 100%;
   padding: 18px 16px;
   box-sizing: border-box;
