@@ -21,19 +21,19 @@ const NoticeEvent = () => {
   }
 
   const router = useRouter()
-  const queryParams = new URLSearchParams(window.location.search)
-  const initialTab = queryParams.get('tab') === 'event' ? 'event' : 'notice'
-
-  const [activeTab, setActiveTab] = useState(initialTab)
-  const [contents, setContents] = useState(
-    sortByDate(initialTab === 'notice' ? [...notice] : [...event]),
-  )
+  const [activeTab, setActiveTab] = useState('notice')
+  const [contents, setContents] = useState([])
 
   useEffect(() => {
-    const tab = queryParams.get('tab') === 'event' ? 'event' : 'notice'
-    setActiveTab(tab)
-    setContents(sortByDate(tab === 'notice' ? [...notice] : [...event]))
-  }, [queryParams])
+    if (typeof window !== 'undefined') {
+      const queryParams = new URLSearchParams(window.location.search)
+      const initialTab = queryParams.get('tab') === 'event' ? 'event' : 'notice'
+      setActiveTab(initialTab)
+      setContents(
+        sortByDate(initialTab === 'notice' ? [...notice] : [...event]),
+      )
+    }
+  }, [])
 
   const handleTabClick = (tab) => {
     router.push(`/noticeEvent?tab=${tab}`)
