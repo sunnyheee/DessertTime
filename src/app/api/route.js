@@ -69,12 +69,3 @@ export default async function handler(req, res) {
     res?.status(500).json({ error: 'Failed to read data' })
   }
 }
-
-// 실제데이터
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
-
-export async function fetchCategories() {
-  const response = await fetch(`${BASE_URL}/ctg_1`)
-  const result = await response.json()
-  return result.data || []
-}

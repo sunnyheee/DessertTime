@@ -14,7 +14,7 @@
   margin-top: 2.5rem;
 }
 .tasteList li {
-  flex: 1 0 calc(25% - 1rem); /* 반응형으로 너비를 설정합니다 */
+  width: calc(25% - 1rem);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -10,7 +10,7 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
     setPreferences((prev) =>
       prev.includes(preference)
         ? prev.filter((p) => p !== preference)
-        : [...prev, preference].slice(0, 5),
+        : [...prev, preference].slice(0, 6),
     )
   }
 
@@ -19,7 +19,7 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
     onComplete(preferences)
   }
 
-  const isFormComplete = preferences.length >= 5
+  const isFormComplete = preferences.length >= 6
 
   return (
     <>
@@ -28,16 +28,16 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
       <form className={styles.formContent} onSubmit={handleSubmit}>
         <section className={styles.addBox}>
           <ul className={styles.tasteList}>
-            {cateData.length > 0 ? (
+            {cateData?.length > 0 ? (
               cateData.map((item) => (
-                <li key={item.prd_id}>
+                <li key={item.DCId}>
                   <button
                     type="button"
-                    onClick={() => togglePreference(item.prd_name)}
-                    className={`${styles.button} ${preferences.includes(item.prd_name) ? styles.selected : ''}`}
+                    onClick={() => togglePreference(item.dessertName)}
+                    className={`${styles.button} ${preferences.includes(item.dessertName) ? styles.selected : ''}`}
                   >
-                    <img src={item.prd_img} alt={item.prd_name} />
-                    {item.prd_name}
+                    <img src={item.prd_img} alt={item.dessertName} />
+                    {item.dessertName}
                   </button>
                 </li>
               ))
