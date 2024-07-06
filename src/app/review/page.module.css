@@ -5,6 +5,7 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
+ 
 }
 .homeSec {
   padding: 6.5rem 0 0;
@@ -310,8 +311,8 @@
 .upload {
   position: fixed;
   bottom: 82px;
-left: 11px;
-right: 16px;
+  width: 100%;
+  max-width: 454px;
   padding: 18px 16px;
   box-sizing: border-box;
   font-style: normal;
@@ -319,13 +320,17 @@ right: 16px;
   font-size: 20px;
   line-height: 25px;
   cursor: pointer;
-  margin-left: 5px;
+
   text-align: center;
   letter-spacing: 0.38px;
   color: #ffffff;
   background-color: var(--pointColor);
   border-radius: 13px;
   border: none;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 16px); 
+
 }
 
 .active {

@@ -152,7 +152,7 @@ const Reviewpage = () => {
                 </button>
               </div>
             </div>
-
+            
             <button className={styles.upload} type="button">
               새로운 영수증 등록하기
             </button>
