@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import Footer from '../_components/common/Footer'
-import styles from './page.module.css'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Footer from '../_components/common/Footer';
+import styles from './page.module.css';
 
 const Mypage = () => {
   return (
@@ -29,14 +29,15 @@ const Mypage = () => {
               className={styles.profile}
             />
             <h1 className={styles.nickname}>1234567번째 달달한 고구마</h1>
+            <Link href="/profile">
             <button className={styles.correction}>내 정보 수정</button>
+            </Link>
             <div className={styles.firstWrap}>
               <Link href="/review/myReview">
                 <div className={styles.myReview}>
                   <p className={styles.left}>내 후기</p>
                   <div className={styles.right}>
                     <p className={styles.txt}>23 개</p>
-
                     <Image
                       src="/images/chevronRight.png"
                       alt="chevronRight"
@@ -53,7 +54,6 @@ const Mypage = () => {
                   <div className={styles.right}>
                     <div className={styles.txtWrap}>
                       <p className={styles.txt}>3,000</p>
-
                       <Image
                         src="/images/meal.png"
                         width={18}
@@ -74,17 +74,14 @@ const Mypage = () => {
               </div>
             </div>
             <div className={styles.twiceWrap}>
-              <a href="" className={styles.box}>
-                <img
-                  src="/images/announcement.png"
-                  className={styles.boxImage}
-                />
+              <Link href="/noticeEvent?tab=notice" className={styles.box}>
+                <img src="/images/announcement.png" className={styles.boxImage} />
                 <p className={styles.boxTxt}>공지사항</p>
-              </a>
-              <a href="" className={styles.box}>
+              </Link>
+              <Link href="/noticeEvent?tab=event" className={styles.box}>
                 <img src="/images/gift.png" className={styles.boxImage} />
                 <p className={styles.boxTxt}>이벤트</p>
-              </a>
+              </Link>
               <a href="/inquiry" className={styles.box}>
                 <img src="/images/inquiry.png" className={styles.boxImage} />
                 <p className={styles.boxTxt}>문의사항</p>
@@ -95,7 +92,7 @@ const Mypage = () => {
       </section>
       <Footer activeButton="mypage" />
     </>
-  )
-}
+  );
+};
 
-export default Mypage
+export default Mypage;

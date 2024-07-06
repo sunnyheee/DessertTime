@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .head {
@@ -105,6 +105,18 @@
   border: none;
   font-size: 20px;
   margin-top: 377px;
+}
+@media (min-height: 600px) {
+  .btn {
+    margin-top: 477px; 
+  }
+}
+
+
+@media (min-height: 800px) {
+  .btn {
+    margin-top: 555px;
+  }
 }
 .btnActive {
   background: var(--pointColor);

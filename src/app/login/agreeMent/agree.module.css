@@ -4,7 +4,7 @@
   flex-direction: column;
   padding: 0 30px;
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .head {
@@ -77,7 +77,7 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 211px;
+  margin-top: 216px;
   gap: 9px;
 }
 @media (min-height: 600px) {
@@ -89,7 +89,7 @@
 
 @media (min-height: 800px) {
   .buttonContainer {
-    margin-top: 467px;
+    margin-top: 451px;
   }
 }
 .button {
@@ -107,6 +107,7 @@
   font-size: 20px;
   line-height: 25px;
   letter-spacing: 0.38px;
+  box-sizing: border-box;
 }
 
 .prevbtn {
