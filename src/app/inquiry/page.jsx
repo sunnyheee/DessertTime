@@ -1,14 +1,22 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 import styles from './inquiry.module.css'
 import Header from '../_components/common/Header'
-import { useRouter } from 'next/navigation'
 
 export default function Inquiry() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [isButtonEnabled, setIsButtonEnabled] = useState(false)
   const router = useRouter()
+
+  const updateButtonState = (emailValue, messageValue) => {
+    if (emailValue.trim() !== '' && messageValue.trim() !== '') {
+      setIsButtonEnabled(true)
+    } else {
+      setIsButtonEnabled(false)
+    }
+  }
 
   const handleEmailChange = (e) => {
     const { value } = e.target
@@ -21,15 +29,6 @@ export default function Inquiry() {
     setMessage(value)
     updateButtonState(email, value)
   }
-
-  const updateButtonState = (email, message) => {
-    if (email.trim() !== '' && message.trim() !== '') {
-      setIsButtonEnabled(true)
-    } else {
-      setIsButtonEnabled(false)
-    }
-  }
-
   const handleSubmit = () => {
     router.push('/inquiry/success')
   }
@@ -37,12 +36,7 @@ export default function Inquiry() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <Header
-          title="문의하기"
-          showBackButton={true}
-          showIcons={false}
-          showMainLogo={false}
-        />
+        <Header title="문의하기" showIcons={false} showMainLogo={false} />
         <div className={styles.content}>
           <p className={styles.email}>답변용 이메일</p>
           <input
@@ -60,6 +54,7 @@ export default function Inquiry() {
             onChange={handleMessageChange}
           ></textarea>
           <button
+            type="button"
             className={`${styles.btn} ${isButtonEnabled ? styles.btnActive : ''}`}
             onClick={handleSubmit}
             disabled={!isButtonEnabled}
