@@ -44,12 +44,13 @@ const Profile = () => {
   const handleAddressChange = (e) => setAddress(e.target.value)
 
   const getAddress = () => {
-    if (!isScriptLoaded) return
-    new window.daum.Postcode({
-      oncomplete: (data) => {
-        setAddress(data.address)
-      },
-    }).open()
+    if (typeof window !== 'undefined' && isScriptLoaded) {
+      new window.daum.Postcode({
+        oncomplete: (data) => {
+          setAddress(data.address)
+        },
+      }).open()
+    }
   }
 
   const onComplete = ({ gender1, birthYear1, address1 }) => {

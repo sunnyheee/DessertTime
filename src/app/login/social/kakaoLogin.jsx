@@ -3,7 +3,9 @@ const KaKaohandleLogin = () => {
   const redirect_uri = 'http://localhost:3000/login/agreeMent' // Redirect URI
   const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${Rest_api_key}&redirect_uri=${redirect_uri}&response_type=code`
 
-  window.location.href = kakaoURL
+  if (typeof window !== 'undefined') {
+    window.location.href = kakaoURL
+  }
 }
 
 export default KaKaohandleLogin

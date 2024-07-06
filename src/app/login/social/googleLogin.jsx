@@ -7,7 +7,9 @@ const GooglehandleLogin = () => {
   const state = 'false'
   const googleURL = `https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&state=${state}`
 
-  window.location.href = googleURL
+  if (typeof window !== 'undefined') {
+    window.location.href = googleURL
+  }
 }
 
 export default GooglehandleLogin

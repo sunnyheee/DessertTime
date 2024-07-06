@@ -4,7 +4,9 @@ const NaverhandleLogin = () => {
   const state = 'false'
   const naverURL = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=${state}`
 
-  window.location.href = naverURL
+  if (typeof window !== 'undefined') {
+    window.location.href = naverURL
+  }
 }
 
 export default NaverhandleLogin
