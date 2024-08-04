@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Image from 'next/image'
 import styles from './AddAdiminTaste.module.css'
 import Button from '../../../_components/common/Button'
 
@@ -21,6 +22,16 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
 
   const isFormComplete = preferences.length >= 6
 
+  const getSvgStyle = (dessertName) => {
+    return {
+      filter: preferences.includes(dessertName) ? 'none' : 'grayscale(100%)',
+      WebkitFilter: preferences.includes(dessertName)
+        ? 'none'
+        : 'grayscale(100%)',
+      fill: preferences.includes(dessertName) ? '#EF4444' : '#bcbcbc',
+    }
+  }
+
   return (
     <>
       <h2 className={styles.title}>취향 선택</h2>
@@ -30,13 +41,18 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
           <ul className={styles.tasteList}>
             {cateData?.length > 0 ? (
               cateData.map((item) => (
-                <li key={item.DCId}>
+                <li key={item.dessertCategoryId}>
                   <button
                     type="button"
                     onClick={() => togglePreference(item.dessertName)}
                     className={`${styles.button} ${preferences.includes(item.dessertName) ? styles.selected : ''}`}
                   >
-                    <img src={item.prd_img} alt={item.dessertName} />
+                    <Image
+                      src="/"
+                      alt={item.dessertName}
+                      width={40}
+                      height={40}
+                    />
                     {item.dessertName}
                   </button>
                 </li>
@@ -50,7 +66,6 @@ function AddAdiminTaste({ onComplete, cateData, onPrevious }) {
             <Button
               text={isFormComplete ? '완료' : '다음'}
               type="submit"
-              onClick={handleSubmit}
               className={
                 isFormComplete
                   ? `${styles.buttonComplete} ${styles.next}`

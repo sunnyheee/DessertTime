@@ -11,6 +11,7 @@ import StarIcon from '../../_components/icon/StarIcon'
 const MyReview = () => {
   const reviews = [
     {
+      type: 'myReview',
       id: 1,
       store: '온혜화',
       dessert: '바질치즈스콘',
