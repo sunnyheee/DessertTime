@@ -1,6 +1,32 @@
 {
   "categories": [
     {
+      "name": "구움과자",
+      "slug": "guunm",
+      "subcategories": [
+        {
+          "name": "스콘",
+          "slug": "sukon",
+          "items": [
+            {
+              "type": "myReview",
+              "id": 1,
+              "username": "빵덕후",
+              "usericon": "usericon03.png",
+              "date": "24.05.01",
+              "shopname": "빵공장",
+              "kind": "통밀식빵",
+              "star": 4,
+              "like": 85,
+              "img": ["bread-img01.jpg", "bread-img02.jpg"],
+              "comment": "통밀식빵은 건강한 맛이 느껴져서 좋습니다.",
+              "ingredient": ["통밀", "효모", "소금"]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "빵",
       "slug": "bread",
       "subcategories": [
@@ -410,6 +436,7 @@
         }
       ]
     },
+
     {
       "name": "전통 디저트",
       "slug": "traditional-dessert",
@@ -457,7 +484,7 @@
           "slug": "yakgwa",
           "items": [
             {
-              "id": 1,
+              "id": 134,
               "username": "130번째달달한고구마",
               "usericon": "usericon01.png",
               "date": "24.06.01",

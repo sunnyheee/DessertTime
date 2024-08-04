@@ -81,8 +81,8 @@ const CategorySlugPage = async ({ params }) => {
                   </div>
 
                   <ul className={styles.ingredientList}>
-                    {item.ingredient.map((ingredientItem) => (
-                      <li>{ingredientItem}</li>
+                    {item.ingredient.map((ingredientItem, i) => (
+                      <li key={i}>{ingredientItem}</li>
                     ))}
                   </ul>
                 </Link>
