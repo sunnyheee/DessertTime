@@ -8,16 +8,16 @@ export async function getDummyData() {
   return JSON.parse(fileContents)
 }
 
-export async function getSlugDummyData(slug) {
+export async function getSlugDummyData(id) {
   const data = await getDummyData()
 
   let foundCategory = data.categories.find(
-    (categoryData) => categoryData.slug === slug,
+    (categoryData) => categoryData.id === id,
   )
   if (foundCategory) return foundCategory
 
   data.categories.some((cat) => {
-    foundCategory = cat.subcategories.find((subcat) => subcat.slug === slug)
+    foundCategory = cat.subcategories.find((subcat) => subcat.id === id)
     return foundCategory
   })
 

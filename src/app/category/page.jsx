@@ -1,11 +1,12 @@
 import Footer from '../_components/common/Footer'
 import Header from '../_components/common/Header'
 import styles from './page.module.css'
-import { getDummyData } from '../api/route'
 import CategoryList from './_component/CategoryList'
+import fetchCategories from '../api/category'
 
 const CategoryPage = async () => {
-  const dummyData = await getDummyData()
+  const cateData = await fetchCategories()
+  console.log('Fetched Categories Data:', cateData)
 
   return (
     <>
@@ -15,7 +16,7 @@ const CategoryPage = async () => {
           <p className={styles.description}>
             후기가 궁금한 디저트를 찾아보세요
           </p>
-          <CategoryList categories={dummyData.categories} />
+          <CategoryList cateData={cateData} />
         </div>
       </section>
       <Footer activeButton="category" />

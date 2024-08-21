@@ -6,17 +6,34 @@ import Footer from '../../_components/common/Footer'
 import styles from './page.module.css'
 import ItemHeartIcon from '../../_components/icon/ItemHeartIcon'
 import StarIcon from '../../_components/icon/StarIcon'
-import { getSlugDummyData } from '../../api/route'
+
+import fetchCategoryById from '../../api/categoryId'
 
 const CategorySlugPage = async ({ params }) => {
-  const { slug } = params
-  const categoryData = await getSlugDummyData(slug)
+  const { id } = params
+  console.log(id, 'idid')
+
+  const categoryData = await fetchCategoryById(id)
+  console.log(categoryData, 'categoryData')
 
   if (!categoryData) {
-    return <div>Category not found</div>
+    return (
+      <>
+        <Header title="카테고리 없음" showMainLogo={false} />
+        <section className="sec bg">
+          <div className={styles.content}>
+            <h3 className={styles.title}>
+              카테고리 페이지를 찾을 수 없습니다.
+            </h3>
+          </div>
+        </section>
+        <Footer />
+      </>
+    )
   }
 
-  const { name: categoryName, items: subcategoryItems } = categoryData
+  const { dessertName: categoryName, secondCategory: subcategoryItems } =
+    categoryData
 
   return (
     <>
