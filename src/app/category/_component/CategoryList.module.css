@@ -28,7 +28,11 @@
   align-items: center;
   justify-content: space-between;
 }
-
+.titlebox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .subcategoryList {
   display: flex;
   gap: 1rem;
